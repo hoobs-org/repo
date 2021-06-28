@@ -7,3 +7,5 @@ yarn-error.log*
 /img
 /bin
 /npm
+/src
+
