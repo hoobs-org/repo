@@ -1,0 +1,79 @@
+Package: helm
+Version: 1.2.5
+Architecture: all
+Installed-Size: 65
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), libpam-dev, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/helm/helm_1.2.5_all.deb
+Size: 320262
+SHA256: f41c1793ad6a3f28c1109cc7f2c6d4648375ae61a5d65c743481f3f54451a6e8
+SHA1: 803056b79b250629ada0d7be89372e1bbb105ee5
+MD5sum: 041110335cc2cf54e94d6c9961c9d90b
+Description: Recovery and remote console for the Raspberry Pi.
+
+Package: hoobs
+Version: 4.0.28
+Architecture: all
+Depends: hoobs-cli (>= 4.0.0), hoobsd (>= 4.0.0), hoobs-gui (>= 4.0.0)
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobs/hoobs_4.0.28_all.deb
+Size: 1976
+SHA256: 6a6b281cd4e18b9947bc7dbfef1730f209227761a72c8e904a70c4f3a38441cf
+SHA1: 0968f8193399f5437cd4d943d57b42cc9469b772
+MD5sum: 7583607b7ce1b50953e64e3ea50f56b9
+Description: Build your Smart Home with HOOBS. Connect over 2,000 Accessories to your favorite Ecosystem.
+
+Package: hoobs-cli
+Version: 4.0.30
+Architecture: all
+Installed-Size: 51
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), git, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.0.30_all.deb
+Size: 69630
+SHA256: 4f3675711caae7c002b9f0586a8913b6a8d50e76657bc16328864d02bf64a5a5
+SHA1: 640fbff249c6958baf79769770cf100519b31cbc
+MD5sum: a5a053ed0b9f6a1b334b29ecb13b2a45
+Description: Command line interface for the certified HOOBS smart home stack.
+
+Package: hoobs-gui
+Version: 4.0.63
+Architecture: all
+Installed-Size: 51
+Depends: hoobsd (>= 4.0.0), helm (>= 1.2.2)
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobs-gui/hoobs-gui_4.0.63_all.deb
+Size: 13090160
+SHA256: f78fd4c0f00f99f709476e5f0e232f3f3fe298c8c61bd0c4ec1bc45d87b3e258
+SHA1: bc00d173990b7ce1ca14bc5987a6516150fb2ab6
+MD5sum: 48ab68bb8f5a9ce6bfdd3db6dec5c0a6
+Description: Interface component for the certified HOOBS stack.
+
+Package: hoobsd
+Version: 4.0.69
+Architecture: all
+Installed-Size: 65
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), lsof, git, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobsd/hoobsd_4.0.69_all.deb
+Size: 103678
+SHA256: ae351e684b43afae4cfc93c2cc7f1fae087474b858d64683fbc84c459157331b
+SHA1: 5ab75551351614686b384962b7e35b117c6701e6
+MD5sum: e11239cca53b052cebb5873db6110fb6
+Description: Server component for the certified HOOBS smart home stack.
+
