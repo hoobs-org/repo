@@ -7,7 +7,7 @@
         "application": "hbs",
         "version": "4.0.33",
         "published": {
-            "$date": "2021-06-29T13:08:59.461Z"
+            "$date": "2021-06-29T13:09:23.111Z"
         },
         "latest": true,
         "download": "https://github.com/hoobs-org/cli/releases/download/v4.0.33/hoobs-cli-v4.0.33.tar.gz",
@@ -17,10 +17,10 @@
         "application": "setup",
         "version": "4.0.33",
         "published": {
-            "$date": "2021-06-29T13:08:59.461Z"
+            "$date": "2021-06-29T13:09:23.111Z"
         },
         "latest": true,
-        "download": "https://dl.hoobs.org/bleeding",
+        "download": "https://dl.hoobs.org/edge",
         "beta": true
     }
 }

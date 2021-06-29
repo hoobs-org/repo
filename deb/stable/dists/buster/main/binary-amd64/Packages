@@ -30,7 +30,7 @@ MD5sum: 7583607b7ce1b50953e64e3ea50f56b9
 Description: Build your Smart Home with HOOBS. Connect over 2,000 Accessories to your favorite Ecosystem.
 
 Package: hoobs-cli
-Version: 4.0.32
+Version: 4.0.33
 Architecture: all
 Installed-Size: 51
 Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), git, python3, make, gcc, g++
@@ -38,11 +38,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.org>
 Homepage: https://hoobs.org
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-cli/hoobs-cli_4.0.32_all.deb
-Size: 69934
-SHA256: b2d6546c4f24952ae5b18b2549a4e0e3aab25ea5543d3cb59312f3bc62505cae
-SHA1: bf45d8286d32220263b4a6a8dece125239917b77
-MD5sum: ff9ba575da50cb4b88aa9b7908ec74a7
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.0.33_all.deb
+Size: 69974
+SHA256: 6cc28dd3d71fe4cdeeeabe03e9a20110a5bc980dde9981ba040d0f4589a55cce
+SHA1: 1fe16b04ca9b396ac3a4c6f72d447b75fa81ca8f
+MD5sum: fab3cc5f3bd6e6c47343d641e15ff713
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
