@@ -3,5 +3,5 @@ Label: HOOBS
 Codename: buster
 Architectures: i386 amd64 armhf
 Components: main
-Description: HOOBS Repository (Edge)
+Description: HOOBS Repository (Bleeding)
 SignWith: HOOBS

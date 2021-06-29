@@ -3,24 +3,44 @@
         "latest": true,
         "beta": false
     },
+    "gui": {
+        "application": "gui",
+        "version": "4.0.63",
+        "published": {
+            "$date": "2021-06-29T00:13:51.701Z"
+        },
+        "latest": true,
+        "download": "https://github.com/hoobs-org/gui/releases/download/v4.0.63/hoobs-gui-v4.0.63.tar.gz",
+        "beta": true
+    },
+    "hoobsd": {
+        "application": "hoobsd",
+        "version": "4.0.69",
+        "published": {
+            "$date": "2021-06-29T00:13:51.701Z"
+        },
+        "latest": true,
+        "download": "https://github.com/hoobs-org/hoobsd/releases/download/v4.0.69/hoobsd-v4.0.69.tar.gz",
+        "beta": true
+    },
     "hbs": {
         "application": "hbs",
         "version": "4.0.31",
         "published": {
-            "$date": "2021-06-28T23:55:07.559Z"
+            "$date": "2021-06-29T00:13:51.701Z"
         },
         "latest": true,
         "download": "https://github.com/hoobs-org/cli/releases/download/v4.0.31/hoobs-cli-v4.0.31.tar.gz",
-        "beta": false
+        "beta": true
     },
     "setup": {
         "application": "setup",
         "version": "4.0.31",
         "published": {
-            "$date": "2021-06-28T23:55:07.559Z"
+            "$date": "2021-06-29T00:13:51.701Z"
         },
         "latest": true,
-        "download": "https://dl.hoobs.org/setup",
-        "beta": false
+        "download": "https://dl.hoobs.org/edge",
+        "beta": true
     }
 }

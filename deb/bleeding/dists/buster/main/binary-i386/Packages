@@ -1,0 +1,63 @@
+Package: hoobs
+Version: 4.0.28
+Architecture: all
+Depends: hoobs-cli (>= 4.0.0), hoobsd (>= 4.0.0), hoobs-gui (>= 4.0.0)
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobs/hoobs_4.0.28_all.deb
+Size: 1976
+SHA256: f4aba055d3e4ec93dd52a56b77f0d0ad3671404be47009a6261341a7a161d2e7
+SHA1: d0e4093359f8a45b86312d157893ad671d260859
+MD5sum: 631c993362f6ff8bba836c072b1df5c5
+Description: Build your Smart Home with HOOBS. Connect over 2,000 Accessories to your favorite Ecosystem.
+
+Package: hoobs-cli
+Version: 4.0.31
+Architecture: all
+Installed-Size: 51
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), git, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.0.31_all.deb
+Size: 69822
+SHA256: 93aac594d5f547ef8b23f6d55a60423fe6913a3c12e4e40c85ba44fd3f4d061f
+SHA1: 663e57fac1e9338e59e4ecbd29e76a45ca6f3e12
+MD5sum: 9584fc8732c943de86b76b22a93601d8
+Description: Command line interface for the certified HOOBS smart home stack.
+
+Package: hoobs-gui
+Version: 4.0.63
+Architecture: all
+Installed-Size: 51
+Depends: hoobsd (>= 4.0.0), helm (>= 1.2.2)
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobs-gui/hoobs-gui_4.0.63_all.deb
+Size: 13090828
+SHA256: cee71fbefb3562fcbaeeba180876be3eacaef35bb643d6d07c1da07d30fa9eb1
+SHA1: 513c250a48d3f2c65896d503f49d76aa1c5436f8
+MD5sum: e1de4d612a9256734d40f619696fa2d4
+Description: Interface component for the certified HOOBS stack.
+
+Package: hoobsd
+Version: 4.0.69
+Architecture: all
+Installed-Size: 65
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), lsof, git, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobsd/hoobsd_4.0.69_all.deb
+Size: 103670
+SHA256: fbb6b2241df5226d2d7449fdf578f31f6fa215299e402441bf3b8bc4cc7aee36
+SHA1: 1d6b99dc4916e4bb8d831d9cf51ed5618e87f62f
+MD5sum: f979ac6b98b3c166c8c0e4758c0b33e3
+Description: Server component for the certified HOOBS smart home stack.
+
