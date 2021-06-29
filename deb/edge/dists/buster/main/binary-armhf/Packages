@@ -15,18 +15,18 @@ MD5sum: 041110335cc2cf54e94d6c9961c9d90b
 Description: Recovery and remote console for the Raspberry Pi.
 
 Package: hoobs
-Version: 4.0.28
+Version: 4.0.29
 Architecture: all
 Depends: hoobs-cli (>= 4.0.0), hoobsd (>= 4.0.0), hoobs-gui (>= 4.0.0)
 Maintainer: HOOBS Maintainers <info@hoobs.org>
 Homepage: https://hoobs.org
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs/hoobs_4.0.28_all.deb
+Filename: pool/main/h/hoobs/hoobs_4.0.29_all.deb
 Size: 1976
-SHA256: cd560a12575656f51e4922152b2e44567bd485d6249274596b0d7e170b20432a
-SHA1: b51a7fdad96e6f526cfd9eb2d74e8515d885fd64
-MD5sum: 37495a1887a7c1da116d213f83b81f61
+SHA256: a36a2cb61ba17dedf9d3b66185fb55e7fe169bd0979a6c2594c778124a22f9eb
+SHA1: cbf41e8079fa481d2fa4daaaab07742c8cb4b6c4
+MD5sum: 22b3a2699a6dfcf8800bd4b87b376987
 Description: Build your Smart Home with HOOBS. Connect over 2,000 Accessories to your favorite Ecosystem.
 
 Package: hoobs-cli

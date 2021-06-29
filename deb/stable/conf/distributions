@@ -4,4 +4,4 @@ Codename: buster
 Architectures: i386 amd64 armhf
 Components: main
 Description: HOOBS Repository
-SignWith: HOOBS
+SignWith: hoobs
