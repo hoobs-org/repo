@@ -3,34 +3,24 @@
         "latest": true,
         "beta": false
     },
-    "hoobsd": {
-        "application": "hoobsd",
-        "version": "4.0.70",
-        "published": {
-            "$date": "2021-06-29T01:09:19.221Z"
-        },
-        "latest": true,
-        "download": "https://github.com/hoobs-org/hoobsd/releases/download/v4.0.70/hoobsd-v4.0.70.tar.gz",
-        "beta": false
-    },
     "hbs": {
         "application": "hbs",
-        "version": "4.0.32",
+        "version": "4.0.33",
         "published": {
-            "$date": "2021-06-29T01:09:19.221Z"
+            "$date": "2021-06-29T13:08:59.461Z"
         },
         "latest": true,
-        "download": "https://github.com/hoobs-org/cli/releases/download/v4.0.32/hoobs-cli-v4.0.32.tar.gz",
-        "beta": false
+        "download": "https://github.com/hoobs-org/cli/releases/download/v4.0.33/hoobs-cli-v4.0.33.tar.gz",
+        "beta": true
     },
     "setup": {
         "application": "setup",
-        "version": "4.0.32",
+        "version": "4.0.33",
         "published": {
-            "$date": "2021-06-29T01:09:19.221Z"
+            "$date": "2021-06-29T13:08:59.461Z"
         },
         "latest": true,
-        "download": "https://dl.hoobs.org/stable",
-        "beta": false
+        "download": "https://dl.hoobs.org/bleeding",
+        "beta": true
     }
 }
