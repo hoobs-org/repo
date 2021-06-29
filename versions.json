@@ -7,7 +7,7 @@
         "application": "hoobsd",
         "version": "4.0.70",
         "published": {
-            "$date": "2021-06-29T01:08:22.190Z"
+            "$date": "2021-06-29T01:08:52.687Z"
         },
         "latest": true,
         "download": "https://github.com/hoobs-org/hoobsd/releases/download/v4.0.70/hoobsd-v4.0.70.tar.gz",
@@ -17,7 +17,7 @@
         "application": "hbs",
         "version": "4.0.32",
         "published": {
-            "$date": "2021-06-29T01:08:22.190Z"
+            "$date": "2021-06-29T01:08:52.687Z"
         },
         "latest": true,
         "download": "https://github.com/hoobs-org/cli/releases/download/v4.0.32/hoobs-cli-v4.0.32.tar.gz",
@@ -27,10 +27,10 @@
         "application": "setup",
         "version": "4.0.32",
         "published": {
-            "$date": "2021-06-29T01:08:22.190Z"
+            "$date": "2021-06-29T01:08:52.687Z"
         },
         "latest": true,
-        "download": "https://dl.hoobs.org/bleeding",
+        "download": "https://dl.hoobs.org/edge",
         "beta": true
     }
 }
