@@ -1,3 +1,19 @@
+Package: helm
+Version: 1.2.5
+Architecture: all
+Installed-Size: 65
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), libpam-dev, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/helm/helm_1.2.5_all.deb
+Size: 320262
+SHA256: f41c1793ad6a3f28c1109cc7f2c6d4648375ae61a5d65c743481f3f54451a6e8
+SHA1: 803056b79b250629ada0d7be89372e1bbb105ee5
+MD5sum: 041110335cc2cf54e94d6c9961c9d90b
+Description: Recovery and remote console for the Raspberry Pi.
+
 Package: hoobs
 Version: 4.0.28
 Architecture: all
@@ -60,4 +76,18 @@ SHA256: fbb6b2241df5226d2d7449fdf578f31f6fa215299e402441bf3b8bc4cc7aee36
 SHA1: 1d6b99dc4916e4bb8d831d9cf51ed5618e87f62f
 MD5sum: f979ac6b98b3c166c8c0e4758c0b33e3
 Description: Server component for the certified HOOBS smart home stack.
+
+Package: soma-connect
+Version: 2.2.0
+Architecture: armhf
+Depends: ifplugd
+Maintainer: SOMA <support@somasmarthome.com>
+Priority: optional
+Section: base
+Filename: pool/main/s/soma-connect/soma-connect_2.2.0_armhf.deb
+Size: 13227268
+SHA256: 2e5931cb4270387952979f6fff154c481168862f953fd09e4be9af0970ec1737
+SHA1: fbf9ea91cabff21537aa7aba120839d0d8d12903
+MD5sum: bed87c627925e57bb4a97bd2175632fb
+Description: SOMA Connect
 

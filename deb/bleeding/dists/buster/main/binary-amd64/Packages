@@ -1,3 +1,19 @@
+Package: helm
+Version: 1.2.5
+Architecture: all
+Installed-Size: 65
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), libpam-dev, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/helm/helm_1.2.5_all.deb
+Size: 320262
+SHA256: f41c1793ad6a3f28c1109cc7f2c6d4648375ae61a5d65c743481f3f54451a6e8
+SHA1: 803056b79b250629ada0d7be89372e1bbb105ee5
+MD5sum: 041110335cc2cf54e94d6c9961c9d90b
+Description: Recovery and remote console for the Raspberry Pi.
+
 Package: hoobs
 Version: 4.0.28
 Architecture: all
