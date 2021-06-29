@@ -1,0 +1,37 @@
+Origin: HOOBS
+Label: HOOBS
+Codename: buster
+Date: Tue, 29 Jun 2021 00:13:47 UTC
+Architectures: i386 amd64 armhf
+Components: main
+Description: HOOBS Repository (Edge)
+MD5Sum:
+ 5d316bd20415bc9899a362da805be63e 2202 main/binary-i386/Packages
+ 21479fc17d6608925026afbca84852cd 900 main/binary-i386/Packages.gz
+ c6aa72e2390576ef2dbebfbf4719c12a 99 main/binary-i386/Release
+ 5d316bd20415bc9899a362da805be63e 2202 main/binary-amd64/Packages
+ 21479fc17d6608925026afbca84852cd 900 main/binary-amd64/Packages.gz
+ 6fdab36da66d03bb63df7ed450e06ba4 100 main/binary-amd64/Release
+ 5d316bd20415bc9899a362da805be63e 2202 main/binary-armhf/Packages
+ 21479fc17d6608925026afbca84852cd 900 main/binary-armhf/Packages.gz
+ 2626870e48391e78f8c16370c84f5334 100 main/binary-armhf/Release
+SHA1:
+ 5177f74c6c791b9086684b8a19c2eccf06adf06d 2202 main/binary-i386/Packages
+ 058c63399039a05f481fd487ae09659070d64a04 900 main/binary-i386/Packages.gz
+ aeff590a33472149f0ce37003399a47b3919d528 99 main/binary-i386/Release
+ 5177f74c6c791b9086684b8a19c2eccf06adf06d 2202 main/binary-amd64/Packages
+ 058c63399039a05f481fd487ae09659070d64a04 900 main/binary-amd64/Packages.gz
+ df8e6019f316d036d6f149d6d15853448eb8deb1 100 main/binary-amd64/Release
+ 5177f74c6c791b9086684b8a19c2eccf06adf06d 2202 main/binary-armhf/Packages
+ 058c63399039a05f481fd487ae09659070d64a04 900 main/binary-armhf/Packages.gz
+ d5b336bf2d5356258404831d4e0cea4db1ab5738 100 main/binary-armhf/Release
+SHA256:
+ 45656a2d2eb80a9e9fa262f47d6af14f6c603a71bf6c62cff5621394914413b2 2202 main/binary-i386/Packages
+ 68b54bb55b1b46127d03cb3f29ff74214f9a4d6a48e4b6d583e137306c22e2b4 900 main/binary-i386/Packages.gz
+ d9818aeabccf67a27d8fdac927b4745846191c595491cb35dddb68c5ef79007e 99 main/binary-i386/Release
+ 45656a2d2eb80a9e9fa262f47d6af14f6c603a71bf6c62cff5621394914413b2 2202 main/binary-amd64/Packages
+ 68b54bb55b1b46127d03cb3f29ff74214f9a4d6a48e4b6d583e137306c22e2b4 900 main/binary-amd64/Packages.gz
+ c5eb31584ffeceabd64aee7e71c97c78d1eb0125e698f18e3d7bec0637e30cb0 100 main/binary-amd64/Release
+ 45656a2d2eb80a9e9fa262f47d6af14f6c603a71bf6c62cff5621394914413b2 2202 main/binary-armhf/Packages
+ 68b54bb55b1b46127d03cb3f29ff74214f9a4d6a48e4b6d583e137306c22e2b4 900 main/binary-armhf/Packages.gz
+ 7afbcd7a3905dc1c0afba0263492e99ff21763cad39f3e8804324adaca85337e 100 main/binary-armhf/Release
