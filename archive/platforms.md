@@ -1,8 +1,3 @@
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{padding:10px 5px;border-style:none;border-width:1px;overflow:hidden;word-break:normal;border-color:grey;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:center}
-</style>
 <table class="tg">
   <tr>
     <td class="tg-0pky"><img src="https://raw.githubusercontent.com/hoobs-org/hoobs-images/master/site/OS-Logos_Rasbian.jpg" width="100%"></td>
