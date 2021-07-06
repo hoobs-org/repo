@@ -19,6 +19,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.                          #
 ##################################################################################################
 
+exec_cmd "wget -qO- https://dl.hoobs.org/deb/key.gpg | apt-key add -"
+exec_cmd "echo 'deb https://dl.hoobs.org/deb/stable/ buster main' | tee /etc/apt/sources.list.d/hoobs.list"
+
 export DEBIAN_FRONTEND=noninteractive
 
 SCRSUFFIX="_lts.x"
