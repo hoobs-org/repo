@@ -30,7 +30,7 @@ MD5sum: 22b3a2699a6dfcf8800bd4b87b376987
 Description: Build your Smart Home with HOOBS. Connect over 2,000 Accessories to your favorite Ecosystem.
 
 Package: hoobs-cli
-Version: 4.0.35
+Version: 4.0.37
 Architecture: all
 Installed-Size: 51
 Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), git, python3, make, gcc, g++
@@ -38,11 +38,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.org>
 Homepage: https://hoobs.org
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-cli/hoobs-cli_4.0.35_all.deb
-Size: 69974
-SHA256: c95f9321de7be4d7fa536e083d8340366ac8fa41948e5bcbe1b892b43c5bbeb5
-SHA1: 19c07968961df89d9855c4e0424217aabeb6f815
-MD5sum: 4c98b08029e2c90eb3b954528a23862f
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.0.37_all.deb
+Size: 70042
+SHA256: 18444ad1bfa20e2dbfde4d71487cc266c9e6a4db1f160c1a251c0df523a7fdd4
+SHA1: fdd9660d500bd343985c8a7d0726e813239f18e0
+MD5sum: 43348463711c5a7812bf3653f156f928
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
@@ -62,7 +62,7 @@ MD5sum: 1bb075f1343f440e90b6c9ccee2ec383
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 4.0.74
+Version: 4.0.75
 Architecture: all
 Installed-Size: 65
 Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), lsof, git, python3, make, gcc, g++
@@ -70,10 +70,10 @@ Maintainer: HOOBS Maintainers <info@hoobs.org>
 Homepage: https://hoobs.org
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_4.0.74_all.deb
-Size: 104878
-SHA256: f6733ffccf4cddd38acc32bf1f3c14c8cebbf09a2c36e3f914a49f1820f72e8a
-SHA1: 7272de07365bbf36ce1067e95978c60f0168fd16
-MD5sum: 590e9f8ce205eb203964bb68def1b196
+Filename: pool/main/h/hoobsd/hoobsd_4.0.75_all.deb
+Size: 104890
+SHA256: b6e69e36dfca4591a91f36e27d9094b1a71ba54856c84b61b5077b4707031190
+SHA1: 62ddf9f8850db349b62dbed4826d00c82513003f
+MD5sum: 1aa666889208189f0c5043c7020abd50
 Description: Server component for the certified HOOBS smart home stack.
 
