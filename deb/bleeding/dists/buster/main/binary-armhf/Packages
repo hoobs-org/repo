@@ -46,7 +46,7 @@ MD5sum: 654f29d4a2a5e1565b23784f889776a9
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
-Version: 4.0.73
+Version: 4.0.74
 Architecture: all
 Installed-Size: 51
 Depends: hoobsd (>= 4.0.0), helm (>= 1.2.2)
@@ -54,11 +54,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.org>
 Homepage: https://hoobs.org
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-gui/hoobs-gui_4.0.73_all.deb
-Size: 13093876
-SHA256: c2f70e8bd72438c9e31ad035496d34c2358b9d2ae502204645d99ec7d3e520d8
-SHA1: 575d0bf2ee25acd9a24fc4470f24d2f6e38c415b
-MD5sum: ff35ccfa266713ab50c0ece23779089f
+Filename: pool/main/h/hoobs-gui/hoobs-gui_4.0.74_all.deb
+Size: 13094608
+SHA256: e479b34b0720822cd430d6d24c77520bb46f35caf070ab2c1de61289f2baed20
+SHA1: 3f103c09f144efb9eb28329f0563fe0befa63ae2
+MD5sum: c944df5080976e1a03b3bdc83dae560a
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
