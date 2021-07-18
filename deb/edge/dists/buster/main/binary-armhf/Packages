@@ -62,7 +62,7 @@ MD5sum: a5d6cd92532765afa4b428ee2a7cdbbf
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 4.0.89
+Version: 4.0.90
 Architecture: all
 Installed-Size: 65
 Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), lsof, git, python3, make, gcc, g++
@@ -70,11 +70,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.org>
 Homepage: https://hoobs.org
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_4.0.89_all.deb
-Size: 105962
-SHA256: 2786e79e0dddf428f5a557efcba936965242fbda7d12d5ec311bd63647a02556
-SHA1: 6561aa3a964bef929acc1c4bf895f59c747fb449
-MD5sum: ff9ced5e131230a3c8ebb94046f29d38
+Filename: pool/main/h/hoobsd/hoobsd_4.0.90_all.deb
+Size: 105930
+SHA256: cf4b37ec2c17b7bfa9f2a03b75b6bf7699e27a4136313598925ffa93a11e57db
+SHA1: 8df5819e13216bd69dd48b90fbdaf331d5a29311
+MD5sum: 2bdab9aa84e84e29e69356c2a66861f8
 Description: Server component for the certified HOOBS smart home stack.
 
 Package: soma-connect
