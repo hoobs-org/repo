@@ -15,4 +15,3 @@ Now you can install hoobsd and the HOOBS CLI.
 ```sh
 sudo apt install -y hoobsd hoobs-cli
 ```
-
