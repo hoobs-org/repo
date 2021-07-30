@@ -10,7 +10,6 @@ First add the HOOBS repository to your sources.
 wget -qO- https://dl.hoobs.org/stable | sudo -E bash -
 ```
 
-
 Now you can install hoobsd and the HOOBS CLI.
 
 ```sh
