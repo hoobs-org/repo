@@ -1,0 +1,7 @@
+Origin: HOOBS-Node
+Label: HOOBS-Node
+Codename: buster
+Architectures: armhf
+Components: main
+Description: HOOBS Node Repository
+SignWith: hoobs

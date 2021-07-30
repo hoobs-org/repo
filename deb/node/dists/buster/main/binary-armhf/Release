@@ -1,0 +1,5 @@
+Component: main
+Origin: HOOBS-Node
+Label: HOOBS-Node
+Architecture: armhf
+Description: HOOBS Node Repository

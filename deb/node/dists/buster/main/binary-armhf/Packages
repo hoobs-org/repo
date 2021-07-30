@@ -1,0 +1,28 @@
+Package: nodejs
+Version: 14.17.4
+Architecture: armhf
+Maintainer: Ivan Iguaran <ivan@nodesource.com>
+Installed-Size: 111665
+Depends: libatomic1 (>= 4.8), libc6 (>= 2.17), libgcc1 (>= 1:3.5), libstdc++6 (>= 5.2), python3-minimal, ca-certificates
+Conflicts: nodejs-dev, nodejs-legacy, npm
+Replaces: nodejs-dev (<= 0.8.22), nodejs-legacy, npm (<= 1.2.14)
+Provides: nodejs-dev, nodejs-legacy, npm
+Homepage: https://nodejs.org
+Priority: optional
+Section: web
+Filename: pool/main/n/nodejs/nodejs_14.17.4_armhf.deb
+Size: 20194120
+SHA256: 7ac53b71de1b599626d00384710d7aee95f23b4d8ee476e08d54fa9f75fd1c49
+SHA1: f23d944e2fc3bb0f3d6a67aac455df11f4e4cb42
+MD5sum: e318c01e380afd2d8d4904958f22030c
+Description: Node.js event-based server-side javascript engine
+ Node.js is similar in design to and influenced by systems like
+ Ruby's Event Machine or Python's Twisted.
+ .
+ It takes the event model a bit further - it presents the event
+ loop as a language construct instead of as a library.
+ .
+ Node.js is bundled with several useful libraries to handle server tasks :
+ System, Events, Standard I/O, Modules, Timers, Child Processes, POSIX,
+ HTTP, Multipart Parsing, TCP, DNS, Assert, Path, URL, Query Strings.
+

@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: HOOBS-Node
+Label: HOOBS-Node
+Codename: buster
+Date: Fri, 30 Jul 2021 02:04:32 UTC
+Architectures: armhf
+Components: main
+Description: HOOBS Node Repository
+MD5Sum:
+ 15765c35285347d832f4744ba7c5075c 1196 main/binary-armhf/Packages
+ 040c7c005b4ed1e8adcc75e8d6c1d85e 772 main/binary-armhf/Packages.gz
+ 4ad2445985d88e9099162fc5b533d6c8 108 main/binary-armhf/Release
+SHA1:
+ f8670c6c98245e9ed728e3356a9665f27b032360 1196 main/binary-armhf/Packages
+ 9aa8885d4fa3e2881ec2b201d7bd042598618560 772 main/binary-armhf/Packages.gz
+ 61dd606a6aa65ac9f92cf29ee22c439e96804f76 108 main/binary-armhf/Release
+SHA256:
+ 759c4d5ba107f1898da06120e0c9aa07c82e517b7b25a2dd072ccf1714cea587 1196 main/binary-armhf/Packages
+ 6cb81e448213fbb69533b7a904601a2a01eb75d390c2b878c441d9aa2c591ce1 772 main/binary-armhf/Packages.gz
+ 3e2525e899808f3f5a0a808310346108840132d183c9c3bff79790f85d3af218 108 main/binary-armhf/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCgAdFiEE4iZcv/2eugkual5ENylSieNy2z4FAmEDXjAACgkQNylSieNy
+2z63KAv+MSmrQScYmpCzS65muYrzPKxH3LuxzNiK7O1PL9yNLMwsdH3psZSDHkIP
+CQPaEbUC2bbJccQ3Xvio1XOuPJ51SAdy90SehyVIr4b711AMcW9x/LfcRhNouEEe
+DxeVb+tFKlY344Z5BUhXCVnWLW4cHvLAgxztKQSuC3hKCZ7gmDPLWncks3kxeJqh
+DR9XimnoPZT7ZrpIGwfq/ggNe1uoQzHVogCewUByyaD5cFLTB8ScOqj6HcGo7uEg
+BgAORYrljJO15p+qCzBBUPJwvQUajiQBuUKO64hAYOwCGwIENg5Q2eM+RXW3Mk01
+pBb/aV4gZgglp411OB/DCgQVXjLMni92ocmPRXs0KASJ9z1JR91pcgAS2BTHTzVE
+24CAue9UdlHe/CxWILj4eiN495m6wra2qNGNqSbGOYLKCcgnI2dzKGzh4G8Fejs+
+1drGvew8bBEDRFkxBIO+H+Qo0BnlUdSxpWBqC8wisQ0a3xNhvhXnRVghbUas8hOG
+weJr+ckR
+=5VtY
+-----END PGP SIGNATURE-----
