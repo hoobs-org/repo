@@ -4,8 +4,8 @@ Hash: SHA512
 Origin: HOOBS
 Label: HOOBS
 Codename: buster
-Date: Thu, 29 Jul 2021 22:57:18 UTC
-Architectures: i386 amd64 armhf
+Date: Fri, 30 Jul 2021 01:19:14 UTC
+Architectures: i386 amd64 armhf Armel
 Components: main
 Description: HOOBS Repository (Bleeding)
 MD5Sum:
@@ -18,6 +18,9 @@ MD5Sum:
  7ec0d4e5757a7a0fdfdbb69f4acf43b9 3163 main/binary-armhf/Packages
  4ac4a6754c064cf46be803f4f04a280d 1247 main/binary-armhf/Packages.gz
  00cda10c0eb4878433a24753b2f79c9d 104 main/binary-armhf/Release
+ b359ed0254035d9ebb9502fadd823b99 3940 main/binary-Armel/Packages
+ e26865a4bc3cc3d90ac43f652e277816 1676 main/binary-Armel/Packages.gz
+ f957d828b364b122c8f303486454fd2a 104 main/binary-Armel/Release
 SHA1:
  6089f3e11c37ae911d2af6ed4ae3e153b82e4e99 2744 main/binary-i386/Packages
  b737b5ce024eb17c5cac9b3109f7812e81376dd6 1070 main/binary-i386/Packages.gz
@@ -28,6 +31,9 @@ SHA1:
  79fe88d80a760c6cc51dd687d9ea2beacff18ffc 3163 main/binary-armhf/Packages
  b451c0d3ad21dabc1bfe66462c7963ed1814ffe9 1247 main/binary-armhf/Packages.gz
  6cab7e920c151037028d739126a5ce35e74a4107 104 main/binary-armhf/Release
+ d6a3f00e73469b735c74cf8249a9111b8ecf8d4c 3940 main/binary-Armel/Packages
+ 7acd0e225bddf0e6b81e70fe420c77455daf7086 1676 main/binary-Armel/Packages.gz
+ 6a991fd725b03f4c93e0ae46d934287cf9ee49bb 104 main/binary-Armel/Release
 SHA256:
  d31be5d531b67ad1c60a9ba0b431e9d37cec13142aded7db7b5f6d6da3cbdc0d 2744 main/binary-i386/Packages
  b59e1774dbd5f191594a7b5cd52def5c8f29a9a7862cda3c7d33ea2321c30fa6 1070 main/binary-i386/Packages.gz
@@ -38,17 +44,20 @@ SHA256:
  ec737308cd8c1b92ac1a8f55e1b343e50748dc98b4428e48976ef8c6bfc71eae 3163 main/binary-armhf/Packages
  28a0b5644389f6a7dee7a3835cacc8c27f7796a09458f53e8932266f4968c533 1247 main/binary-armhf/Packages.gz
  7b2f1d6cf72e8a2a0c005cbf900dcda8113e07066231183871796376f3e9fe46 104 main/binary-armhf/Release
+ 86386d04de501b74757647f4755fe99d9c4e94de19ad6524a9acae038836d5d9 3940 main/binary-Armel/Packages
+ 6dcc9c72032bc080a5775ce293d9751b8e9149e70f39770673b05de8781ceeb9 1676 main/binary-Armel/Packages.gz
+ 07f6588a8bd6206b7a4e65828596c7abedbd30fc308905495858ae31a14197f0 104 main/binary-Armel/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEE4iZcv/2eugkual5ENylSieNy2z4FAmEDMk4ACgkQNylSieNy
-2z4JawwAmCeJrf0P4gaqlgeFmIi08etlXmhVkWEp7vqbQTIsRmSJ2MK7vjCDGI9P
-p9/rKSt7DbFoGHaTPaks2Hr1oboeh3nedOg2tGhXyntm6pfOumwqquR3FUlfMuFx
-KG2VqONREzdnpDCDCFGvwPBgpdODx+sOByrZiz61GuEArD5BiL5KzeCEyo7BjTrl
-aU4cuBL7OjMlEQ2y5kmh423TzREfxCEMjcyjXx/9yWhyReBcB/OOaN4Vr5Nl/190
-gRuykZCgoef2n+fMXjBKLRGNGOKsniNl1+hs1W9g6UZsCt45YUZy7pck4lvDEo0x
-3g2pNCCVtdRPqlGcAbJdQRdBCRT/fp+vUWLfIQiTj8KJu0XTolDk+5VAygmawK5q
-Zkdwwlaqzev1z/3tfVPGME8XtqUbg9w12WD1bP/8I9QRQ05pkDK3yA1arWv7t0i4
-RK6hiiEDvAuPVMdbmErI3QOFLJrfV+xKchlEmWAtk93jdLEMiallOGPvzZKrKR4D
-p7O1azon
-=1vCT
+iQGzBAEBCgAdFiEE4iZcv/2eugkual5ENylSieNy2z4FAmEDU5IACgkQNylSieNy
+2z7i6wv/Y53vJsg23Aqryt2KYQvUzKICu0RBN8ksL4pinfwoCvkYB1YepuQFZh85
+8Ydsf4N1my4gCXQbe/5cXtLbuvyoLDYhthuCjOxEkawxqm3tWBMdcApWKBmTAP6b
+YK1NB+DqgibmB/lz5uwnQHk3VIPCQs2MI7tHlaJP/COB9zJI8lxUGMFZ8JCCLXvp
+BhjZKg+Y9XCsWcUT5ew9Ysh9pMFuZTF4faeTr60VvTU5EvJDTAmAqgUtp2T8XA7e
+DSy/3K7thjWcoSYOuX9xzBKl784tb5WhNACwy1tEEhqaTVmKvKiCAs25s42S1MMK
+wvleJkOF7eHZ3ntbJ/Z/29gqJ49n0XYHtdJUjHAuLjJVi+/HBhisI1NKk1PrE5Ge
++zZRoNloEsRj+hB+RHx0SdXJh7AtN+2pLo3SdIJCVUQW9FJvGVtpF8Z/4q7gpa1y
+BSM1iWPhXZqhWDP4IC6nImX0gQM+ZY6ifONWgsh6RQ0o+xOu8QJFwhZYRC7NQ2b3
+2qOqWn7R
+=G60w
 -----END PGP SIGNATURE-----

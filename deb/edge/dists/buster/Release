@@ -1,8 +1,8 @@
 Origin: HOOBS
 Label: HOOBS
 Codename: buster
-Date: Thu, 29 Jul 2021 22:57:18 UTC
-Architectures: i386 amd64 armhf
+Date: Fri, 30 Jul 2021 01:19:40 UTC
+Architectures: i386 amd64 armhf Armel
 Components: main
 Description: HOOBS Repository (Edge)
 MD5Sum:
@@ -15,6 +15,9 @@ MD5Sum:
  4ae133609bb181b29b1173d65fc14fc0 3163 main/binary-armhf/Packages
  eb14efb53ea7c82ea3ef5b6d9a2b40c9 1248 main/binary-armhf/Packages.gz
  2626870e48391e78f8c16370c84f5334 100 main/binary-armhf/Release
+ 57b49968fa2910ba8d1557d70fc8edee 3940 main/binary-Armel/Packages
+ 35914c5e0257a83af79d6fda97980c3f 1676 main/binary-Armel/Packages.gz
+ 61af45aedb156107dde39d10b700f917 100 main/binary-Armel/Release
 SHA1:
  520380fa268c509c903405a61c1ea4eee900f880 2744 main/binary-i386/Packages
  6dd72367fd19170b77770e7a275555195b4f2d3c 1070 main/binary-i386/Packages.gz
@@ -25,6 +28,9 @@ SHA1:
  8ed408d9e25b60c4567784ff3f9fda3c76ad9f6e 3163 main/binary-armhf/Packages
  e7a94ebde016a84ca5f84f5a7b63caf047a792bb 1248 main/binary-armhf/Packages.gz
  d5b336bf2d5356258404831d4e0cea4db1ab5738 100 main/binary-armhf/Release
+ 9abab51a76a07557ed0f5c7e79404f5e2590fe3c 3940 main/binary-Armel/Packages
+ a4a306af68eaaca62d5658c868d3aaa9cc148ea2 1676 main/binary-Armel/Packages.gz
+ d0f66713d5de260ad17a25a5fb38f440dd558d92 100 main/binary-Armel/Release
 SHA256:
  fcf297bd70648d1b927f4959c8e6e389d4d46038bd86573365ea28f9b898bc6e 2744 main/binary-i386/Packages
  cf5e1e6c29e6b7a63ae6e7936477891e5696eeb232c0933eb7c50e04c1bce6ea 1070 main/binary-i386/Packages.gz
@@ -35,3 +41,6 @@ SHA256:
  0ba760144c63c868d9ea5a298ee7b9f4c19afe2db8e69e2e995b757d9331f833 3163 main/binary-armhf/Packages
  8717f9db982b058226fb28cdeccda948f6680bf3ddde4d26385e042dec6b10ac 1248 main/binary-armhf/Packages.gz
  7afbcd7a3905dc1c0afba0263492e99ff21763cad39f3e8804324adaca85337e 100 main/binary-armhf/Release
+ bdbbccd0265f78ff2037692fc0685a934a69555ec19e9a4d1a2f288dabd15eb3 3940 main/binary-Armel/Packages
+ aa4a0da2dc0cbdb41cd07f32654fb26e9d5a43b497031e8625618b52e834728e 1676 main/binary-Armel/Packages.gz
+ 13ef60c43eca430dc9266c3e243eb132d2ad180ca18857a58be8b9eceb24f585 100 main/binary-Armel/Release

@@ -1,8 +1,8 @@
 Origin: HOOBS
 Label: HOOBS
 Codename: buster
-Date: Thu, 29 Jul 2021 22:57:18 UTC
-Architectures: i386 amd64 armhf
+Date: Fri, 30 Jul 2021 01:19:51 UTC
+Architectures: i386 amd64 armhf Armel
 Components: main
 Description: HOOBS Repository
 MD5Sum:
@@ -15,6 +15,9 @@ MD5Sum:
  4ae133609bb181b29b1173d65fc14fc0 3163 main/binary-armhf/Packages
  eb14efb53ea7c82ea3ef5b6d9a2b40c9 1248 main/binary-armhf/Packages.gz
  66cdeb55714e25f58866330bacda291c 93 main/binary-armhf/Release
+ e030fd82e988440638c2844a126aeb0e 3940 main/binary-Armel/Packages
+ d1b7f02f99159c7ab1ad9a688b367106 1674 main/binary-Armel/Packages.gz
+ 4c809befeb85930e4d5669d80b50593c 93 main/binary-Armel/Release
 SHA1:
  520380fa268c509c903405a61c1ea4eee900f880 2744 main/binary-i386/Packages
  6dd72367fd19170b77770e7a275555195b4f2d3c 1070 main/binary-i386/Packages.gz
@@ -25,6 +28,9 @@ SHA1:
  8ed408d9e25b60c4567784ff3f9fda3c76ad9f6e 3163 main/binary-armhf/Packages
  e7a94ebde016a84ca5f84f5a7b63caf047a792bb 1248 main/binary-armhf/Packages.gz
  1513b3c5f33d3ea50046f8310fc6c3f055c76f86 93 main/binary-armhf/Release
+ 35d79e01f65a1bea2adaf294963619dacfdbb568 3940 main/binary-Armel/Packages
+ ca40dddf732e041a4cfdddadded52fec6deb9d24 1674 main/binary-Armel/Packages.gz
+ 6201d940f8ee8d511aba38fd376b6e695f3bb8a2 93 main/binary-Armel/Release
 SHA256:
  fcf297bd70648d1b927f4959c8e6e389d4d46038bd86573365ea28f9b898bc6e 2744 main/binary-i386/Packages
  cf5e1e6c29e6b7a63ae6e7936477891e5696eeb232c0933eb7c50e04c1bce6ea 1070 main/binary-i386/Packages.gz
@@ -35,3 +41,6 @@ SHA256:
  0ba760144c63c868d9ea5a298ee7b9f4c19afe2db8e69e2e995b757d9331f833 3163 main/binary-armhf/Packages
  8717f9db982b058226fb28cdeccda948f6680bf3ddde4d26385e042dec6b10ac 1248 main/binary-armhf/Packages.gz
  33dc2b2d77a26b6cee1ba0ad90ea4e9b7eabd99f4e93af79c4417f4734bae989 93 main/binary-armhf/Release
+ 9b13ab8ed34e7483f39fa82c5d9d1c5cd37b0c8afc4752f89e4a45268cdf41bf 3940 main/binary-Armel/Packages
+ 44fd0de79ca23bd133cb01018b84cc16fb6c4149e85136f7668f4d26e6716016 1674 main/binary-Armel/Packages.gz
+ b44cd5374fb46013bb654d2bcf12f8d15396ff8c26f0526aec4294aa3be0dd12 93 main/binary-Armel/Release

@@ -1,0 +1,107 @@
+Package: helm
+Version: 1.2.5
+Architecture: all
+Installed-Size: 65
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), libpam-dev, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/helm/helm_1.2.5_all.deb
+Size: 320262
+SHA256: f41c1793ad6a3f28c1109cc7f2c6d4648375ae61a5d65c743481f3f54451a6e8
+SHA1: 803056b79b250629ada0d7be89372e1bbb105ee5
+MD5sum: 041110335cc2cf54e94d6c9961c9d90b
+Description: Recovery and remote console for the Raspberry Pi.
+
+Package: hoobs
+Version: 4.0.29
+Architecture: all
+Depends: hoobs-cli (>= 4.0.0), hoobsd (>= 4.0.0), hoobs-gui (>= 4.0.0)
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobs/hoobs_4.0.29_all.deb
+Size: 1976
+SHA256: a36a2cb61ba17dedf9d3b66185fb55e7fe169bd0979a6c2594c778124a22f9eb
+SHA1: cbf41e8079fa481d2fa4daaaab07742c8cb4b6c4
+MD5sum: 22b3a2699a6dfcf8800bd4b87b376987
+Description: Build your Smart Home with HOOBS. Connect over 2,000 Accessories to your favorite Ecosystem.
+
+Package: hoobs-cli
+Version: 4.0.42
+Architecture: all
+Installed-Size: 51
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), git, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.0.42_all.deb
+Size: 70074
+SHA256: 95e7e223ede1908f2422c26ec3d8928267bd7bfe74fb8dc0dd90830bcce0bda7
+SHA1: 7edb1c62e663eb71544cd021a690faec125bbb5c
+MD5sum: e128b8758e03f3ea863ff6eddd280501
+Description: Command line interface for the certified HOOBS smart home stack.
+
+Package: hoobs-gui
+Version: 4.0.82
+Architecture: all
+Installed-Size: 51
+Depends: hoobsd (>= 4.0.0), helm (>= 1.2.2)
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobs-gui/hoobs-gui_4.0.82_all.deb
+Size: 13121880
+SHA256: 3e14c4d941a4c0aa9f9628742a26969e44b525f8e5e952ea449f030658a3d54b
+SHA1: 0702c9cd792d5ee85df29b6aef8994b8959f55a5
+MD5sum: e427863e3d98bfa30354f9b04932574a
+Description: Interface component for the certified HOOBS stack.
+
+Package: hoobsd
+Version: 4.0.98
+Architecture: all
+Installed-Size: 65
+Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), lsof, git, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.org>
+Homepage: https://hoobs.org
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobsd/hoobsd_4.0.98_all.deb
+Size: 106058
+SHA256: ebf8b85294698fd62b2eaf3b0df842f187f383b6add974a5930f6cc35d7ad275
+SHA1: 5466848236ed7470b757fa0e84efeedae708547b
+MD5sum: ed02b8f54dd3d192864077e16958281f
+Description: Server component for the certified HOOBS smart home stack.
+
+Package: nodejs
+Version: 14.17.4
+Architecture: Armel
+Maintainer: Ivan Iguaran <ivan@nodesource.com>
+Installed-Size: 111665
+Depends: libatomic1 (>= 4.8), libc6 (>= 2.17), libgcc1 (>= 1:3.5), libstdc++6 (>= 5.2), python3-minimal, ca-certificates
+Conflicts: nodejs-dev, nodejs-legacy, npm
+Replaces: nodejs-dev (<= 0.8.22), nodejs-legacy, npm (<= 1.2.14)
+Provides: nodejs-dev, nodejs-legacy, npm
+Homepage: https://nodejs.org
+Priority: optional
+Section: web
+Filename: pool/main/n/nodejs/nodejs_14.17.4_Armel.deb
+Size: 20194124
+SHA256: 50511642d92812babdd0466b14a193b8986504f00e4140ab73394dd5be69fcfb
+SHA1: a2d44130145c9594b6ea3f47a11e10cee522c28a
+MD5sum: 914aa388fb54ccc9f44c1d63c7828bc8
+Description: Node.js event-based server-side javascript engine
+ Node.js is similar in design to and influenced by systems like
+ Ruby's Event Machine or Python's Twisted.
+ .
+ It takes the event model a bit further - it presents the event
+ loop as a language construct instead of as a library.
+ .
+ Node.js is bundled with several useful libraries to handle server tasks :
+ System, Events, Standard I/O, Modules, Timers, Child Processes, POSIX,
+ HTTP, Multipart Parsing, TCP, DNS, Assert, Path, URL, Query Strings.
+

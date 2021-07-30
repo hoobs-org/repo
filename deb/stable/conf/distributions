@@ -1,7 +1,7 @@
 Origin: HOOBS
 Label: HOOBS
 Codename: buster
-Architectures: i386 amd64 armhf
+Architectures: i386 amd64 armhf Armel
 Components: main
 Description: HOOBS Repository
 SignWith: hoobs
