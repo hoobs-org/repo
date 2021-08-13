@@ -30,7 +30,7 @@ MD5sum: 22b3a2699a6dfcf8800bd4b87b376987
 Description: Build your Smart Home with HOOBS. Connect over 2,000 Accessories to your favorite Ecosystem.
 
 Package: hoobs-cli
-Version: 4.0.43
+Version: 4.0.44
 Architecture: all
 Installed-Size: 51
 Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), git, python3, make, gcc, g++
@@ -38,15 +38,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.org>
 Homepage: https://hoobs.org
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-cli/hoobs-cli_4.0.43_all.deb
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.0.44_all.deb
 Size: 70050
-SHA256: 42c0e5c52c17a970a64a2d9ce98efc439278650d342e34694c6ad215a2962681
-SHA1: 7013e60e219731d479a26a9c0f0156d1b435767e
-MD5sum: acd375651e5c6ee43dfd15551747b8e5
+SHA256: f1b0f5baf1a24dca9169bfb0bd6ba4fa54dafe006434c25e415f915b521123e5
+SHA1: 13f751aeea5577cf8c8abb0b74e60d4fccd4ff2d
+MD5sum: 35950652b9db9efeeff8b64054565031
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
-Version: 4.0.85
+Version: 4.0.86
 Architecture: all
 Installed-Size: 51
 Depends: hoobsd (>= 4.0.0), helm (>= 1.2.2)
@@ -54,15 +54,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.org>
 Homepage: https://hoobs.org
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-gui/hoobs-gui_4.0.85_all.deb
-Size: 13124488
-SHA256: 50b3735eb4cc6da3e167a33580b22f0ef242b4665f1b29973431898bc218edcc
-SHA1: ebfe43d861b56bcf84edccf802555c8efe29a92a
-MD5sum: b6f444a22cb49e46a54b10d6b1e292d0
+Filename: pool/main/h/hoobs-gui/hoobs-gui_4.0.86_all.deb
+Size: 13124652
+SHA256: bf6a3ad3b0ad512f4eb81961ba8125c69a2484e46e0f3573412a6d2e35d6c2df
+SHA1: 04f5f5c7ba34d9dddfb628cc189a93b8ef4d40d5
+MD5sum: 0e914714e424eef6e87c13da03ddd23f
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 4.0.99
+Version: 4.0.100
 Architecture: all
 Installed-Size: 65
 Depends: nodejs (>= 14.15.0), yarn (>= 1.22.0), lsof, git, python3, make, gcc, g++
@@ -70,10 +70,10 @@ Maintainer: HOOBS Maintainers <info@hoobs.org>
 Homepage: https://hoobs.org
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_4.0.99_all.deb
-Size: 106106
-SHA256: b41e5c0d81f848db7bd2ae6110cb7e1d8be76c78ba2419d8811fa81081277a99
-SHA1: daaf4e0786fccce9e0377ded1db903e9037237c6
-MD5sum: 2ed5b2dcee927d9480782b61e48a56dc
+Filename: pool/main/h/hoobsd/hoobsd_4.0.100_all.deb
+Size: 106038
+SHA256: e67ea8cf0e52938cb969c1cb597b1250cd88417a2decdf72c897ba0e6d3782f0
+SHA1: 41cbef7c044cbf4d31aa155b8f3b004795965bf9
+MD5sum: ac36fcdca103d1c2021fa10adfe604e5
 Description: Server component for the certified HOOBS smart home stack.
 
