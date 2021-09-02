@@ -11,10 +11,10 @@ Homepage: https://nodejs.org
 Priority: optional
 Section: web
 Filename: pool/main/n/nodejs/nodejs_16.8.0-hoobs_amd64.deb
-Size: 22548438
-SHA256: 45805acee04b296446b071d5c85f5b33f4f3ac94ccb25de5e2798af606375c7d
-SHA1: 0966a26d48035c2ba51aa0ea5e034d313a3a5e51
-MD5sum: 59e5ed40df1bd7b1ec959626499aa1b6
+Size: 22548726
+SHA256: e7a389b5bf1d0c1e596c6018034d4c8dedf08bf39c612b4f12103060b86801e6
+SHA1: a4711434db8fb09c17cdcc781b86db9c997f55a1
+MD5sum: 37635ea5306fd435a39450be0f737dd7
 Description: Node.js event-based server-side javascript engine
  Node.js is similar in design to and influenced by systems like
  Ruby's Event Machine or Python's Twisted.

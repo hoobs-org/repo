@@ -3,7 +3,7 @@ Version: 14.17.6-hoobs
 Architecture: armel
 Maintainer: Ivan Iguaran <ivan@nodesource.com>
 Installed-Size: 118072
-Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.4), libstdc++6 (>= 4.8), python3-minimal, ca-certificates
+Depends: libatomic1 (>= 4.8), libc6 (>= 2.17), libgcc1 (>= 1:3.5), libstdc++6 (>= 5.2), python3-minimal, ca-certificates
 Conflicts: nodejs-dev, nodejs-legacy, npm
 Replaces: nodejs-dev (<= 0.8.22), nodejs-legacy, npm (<= 1.2.14)
 Provides: nodejs-dev, nodejs-legacy, npm
@@ -11,10 +11,10 @@ Homepage: https://nodejs.org
 Priority: optional
 Section: web
 Filename: pool/main/n/nodejs/nodejs_14.17.6-hoobs_armel.deb
-Size: 20091046
-SHA256: 98245dcc6b361b897b7f3d68de713958d5d4194145301977a48cf6ac0874d097
-SHA1: 7162f272320592c212b559df2ab1ad1e773e569b
-MD5sum: 6ac2bb8b63dcbad1c1093bf0db904a24
+Size: 20091242
+SHA256: 235c4abad1bb562ea0f6dc35401ac63f643d693f1376fdff30e69e2a6b52d052
+SHA1: d2faa4886b5412893fb30a9e65d38d3a8c625b8d
+MD5sum: 35c3afca7a484e59f3afeb52a468d4d6
 Description: Node.js event-based server-side javascript engine
  Node.js is similar in design to and influenced by systems like
  Ruby's Event Machine or Python's Twisted.
