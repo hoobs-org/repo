@@ -1,5 +1,5 @@
 Package: nodejs
-Version: 14.17.6-hoobs
+Version: 16.8.0-hoobs
 Architecture: arm64
 Maintainer: Ivan Iguaran <ivan@nodesource.com>
 Installed-Size: 118072
@@ -10,11 +10,11 @@ Provides: nodejs-dev, nodejs-legacy, npm
 Homepage: https://nodejs.org
 Priority: optional
 Section: web
-Filename: pool/main/n/nodejs/nodejs_14.17.6-hoobs_arm64.deb
-Size: 21524650
-SHA256: 94ea141f0b9e974b9b1872b979cb7945531d9310c0b02ea9b00e24e8c4014481
-SHA1: 8e0b5c24bc8d260b0115011b91423b3414eaba28
-MD5sum: b8187821e4fd7c05dd0bc856567678ca
+Filename: pool/main/n/nodejs/nodejs_16.8.0-hoobs_arm64.deb
+Size: 21660934
+SHA256: 39a89a275cc6d112bbb7f244129e6812e4afa4dd3ac468bbefbf0fad80c6dee3
+SHA1: 3f8db869b8a5075df55b537a0949ddad54d95088
+MD5sum: e614f4563cdc3ba2a10b612765b36058
 Description: Node.js event-based server-side javascript engine
  Node.js is similar in design to and influenced by systems like
  Ruby's Event Machine or Python's Twisted.
