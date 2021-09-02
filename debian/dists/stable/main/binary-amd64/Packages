@@ -8,10 +8,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hbs-portal/hbs-portal_1.0.0_all.deb
-Size: 1038204
-SHA256: 0437bcac61ddb1c41356117a1f5074eb27268e34b4b74976b9c2f992cd1ee8c4
-SHA1: cf79fe0478a57cda1c326f701de72170f0b25736
-MD5sum: f5eb0d8ba4961e8ea950e5300832db30
+Size: 1032084
+SHA256: cdbcbc61bd6da709294226928af78c158ce61b91bb4672ed84d71585ce4d7cf2
+SHA1: 83bb86c9392fb8a9f4b45ca0e72e4c08a269fb26
+MD5sum: 8379fc52f30671a5814c8bf7a5c97679
 Description: HOOBS Capitive WiFi Portal
 
 Package: nodejs
@@ -27,10 +27,10 @@ Homepage: https://nodejs.org
 Priority: optional
 Section: web
 Filename: pool/main/n/nodejs/nodejs_14.17.6-hoobs_amd64.deb
-Size: 22160714
-SHA256: e1d445e16c7189d19a80d630a8a4021c8de22e053842b9cc958f3146b27eba59
-SHA1: 27757378997bfc77b66f758e3e68292464626256
-MD5sum: b826bda99c91299c9bb3fc64521c1857
+Size: 22162998
+SHA256: 4c583e624fb60a78ed40575237f1b254f707f9c177a642eec24d52dabf5e4a0b
+SHA1: 5d8ffd567bfbab099b73a402e42ec67152c0beb7
+MD5sum: 9f6cf5e895b9c9f05db5c71765fb8468
 Description: Node.js event-based server-side javascript engine
  Node.js is similar in design to and influenced by systems like
  Ruby's Event Machine or Python's Twisted.
