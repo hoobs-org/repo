@@ -2,16 +2,16 @@ Package: hbs-portal
 Version: 1.0.0
 Architecture: all
 Installed-Size: 65
-Depends: nodejs (>= 14.15.0)
+Depends: nodejs (>= 14.15.0), dnsmasq, hostapd
 Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hbs-portal/hbs-portal_1.0.0_all.deb
-Size: 1032084
-SHA256: cdbcbc61bd6da709294226928af78c158ce61b91bb4672ed84d71585ce4d7cf2
-SHA1: 83bb86c9392fb8a9f4b45ca0e72e4c08a269fb26
-MD5sum: 8379fc52f30671a5814c8bf7a5c97679
+Size: 1031884
+SHA256: 067c2f3025d367f3ff445f429e57eb61f9f93d3b4906b933313351939e8d94f0
+SHA1: f51241d9f19131aebba43ae04d442d39ce52c7b0
+MD5sum: 282125d59a0fb875d86a6e3ac00a6f0f
 Description: HOOBS Capitive WiFi Portal
 
 Package: nodejs
