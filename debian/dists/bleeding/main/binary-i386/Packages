@@ -3,7 +3,7 @@ Version: 14.17.6-hoobs
 Architecture: i386
 Maintainer: Ivan Iguaran <ivan@nodesource.com>
 Installed-Size: 118072
-Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.4), libstdc++6 (>= 4.8), python-minimal, ca-certificates
+Depends: libc6 (>= 2.17), libgcc1 (>= 1:3.4), libstdc++6 (>= 4.8), python3-minimal, ca-certificates
 Conflicts: nodejs-dev, nodejs-legacy, npm
 Replaces: nodejs-dev (<= 0.8.22), nodejs-legacy, npm (<= 1.2.14)
 Provides: nodejs-dev, nodejs-legacy, npm
@@ -11,10 +11,10 @@ Homepage: https://nodejs.org
 Priority: optional
 Section: web
 Filename: pool/main/n/nodejs/nodejs_14.17.6-hoobs_i386.deb
-Size: 21889594
-SHA256: 283f1361ba9102d262049d28ee135aceb48005b1acd36942e9e2a7b3749d1a78
-SHA1: 8086daa322c4cb1ed823ebe7212852db426b08b4
-MD5sum: a4e6a9207d74ae7e8669d26a5318074e
+Size: 21888994
+SHA256: dddd5e1a720a0f2732a298040034647aa4915d8c0bfc50d132fb1f8b11147906
+SHA1: 4e4548e1ad1216b2ac1038b59bf1d9ec911aba3c
+MD5sum: d38db2cd1ac8f037785ea8c61776ba58
 Description: Node.js event-based server-side javascript engine
  Node.js is similar in design to and influenced by systems like
  Ruby's Event Machine or Python's Twisted.
