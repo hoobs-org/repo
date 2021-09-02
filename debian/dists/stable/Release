@@ -1,0 +1,55 @@
+Origin: HOOBS
+Label: HOOBS
+Codename: stable
+Date: Thu, 02 Sep 2021 02:33:00 UTC
+Architectures: amd64 i386 arm64 armhf armel
+Components: main
+Description: HOOBS Repository
+MD5Sum:
+ 7a4fed1871446e6d8cafd7d6d23a0ed7 1186 main/binary-amd64/Packages
+ 25b99017fc9c2c1e14ee65b25c76b6d2 762 main/binary-amd64/Packages.gz
+ d621e29a2db2e97d0e7416bdec4588ea 93 main/binary-amd64/Release
+ 80738049233c666962478c50f4925a74 1184 main/binary-i386/Packages
+ 4b13aead60a75fd1cddde0daf06c9263 764 main/binary-i386/Packages.gz
+ 09c015dc0820df26549d1443f5fc0f44 92 main/binary-i386/Release
+ 9a81215050b34924fd5d98c327396ee9 1186 main/binary-arm64/Packages
+ 99b1511e760f6f9f31a3fb72a4845b54 763 main/binary-arm64/Packages.gz
+ 49fb8602704a3e75c7d97b944e77bf69 93 main/binary-arm64/Release
+ 64c704b37bea7184b7d1cae24f6cb9fc 1186 main/binary-armhf/Packages
+ 8aa8360c634be6c19a4d62ea05bcab0c 764 main/binary-armhf/Packages.gz
+ 66cdeb55714e25f58866330bacda291c 93 main/binary-armhf/Release
+ 3a0d7fdcffa48240b3449ca3f119306a 1186 main/binary-armel/Packages
+ 20d14d745afde808e525f7b57b1dc489 765 main/binary-armel/Packages.gz
+ d2d70cfe7dae4352410b1d06a7bb1d70 93 main/binary-armel/Release
+SHA1:
+ d8950d7305f92410e834210852f13b31025ef8c0 1186 main/binary-amd64/Packages
+ 61cc37ba5ec1c09aa05875d9b4bbb2d0e1e892c2 762 main/binary-amd64/Packages.gz
+ fa16c28d79be55b4b6b4c05ea8a1730960ce47b6 93 main/binary-amd64/Release
+ d4205b2fbf41adf0ec38a01026e4cc4b35fd45ea 1184 main/binary-i386/Packages
+ aca3034d0fc60c68b4b6cde7c2e70863a0f696e8 764 main/binary-i386/Packages.gz
+ 4b976d3777b95a28cc55bb5a29f95d1645b9a540 92 main/binary-i386/Release
+ 520e2699abf9fdf5843162456372b014752982c7 1186 main/binary-arm64/Packages
+ 7d761daa276d01cc1497f72a3e8e60533649314d 763 main/binary-arm64/Packages.gz
+ 8b09c5e9006d7cdf3fbed8b1f46dbc35f457eddb 93 main/binary-arm64/Release
+ e5c4c49bae28aa0ffd2d7e32d3e65105441b7efc 1186 main/binary-armhf/Packages
+ b7c830396c641d4603f1307a13ae8281aac18740 764 main/binary-armhf/Packages.gz
+ 1513b3c5f33d3ea50046f8310fc6c3f055c76f86 93 main/binary-armhf/Release
+ 1ac6542b34f7327ce28ef2fd05063ff058a934e9 1186 main/binary-armel/Packages
+ 09cef32810f5e68879505ffba1752a24791c1d67 765 main/binary-armel/Packages.gz
+ 99d8388d5098560b9367c17c4450d1128ac37f27 93 main/binary-armel/Release
+SHA256:
+ 91e44cbc53f1729acb96f0c2d34011865f8a37b1e94906101e912448cc7fd4d6 1186 main/binary-amd64/Packages
+ e4030ca8f406e4becd0b3d089eb8f5d3d493013bd63e0ba6f9cddc20b97b52a9 762 main/binary-amd64/Packages.gz
+ 9a2e416e88ff364fa95a8a61569253b69afda123cbe7734dafd4917074ccc254 93 main/binary-amd64/Release
+ 709d33a5c2df822a1d88a9440a52ee18b1201b4a24d8c2e59b4eae46ec24e45e 1184 main/binary-i386/Packages
+ b71b608f4263ab3272723a41b2a038c207e1b5be912a2381daee2b350b2c349e 764 main/binary-i386/Packages.gz
+ 98a172cb0732c54fde164a7ff7767d5725fb002d817634f4366b9fcc2a3080f3 92 main/binary-i386/Release
+ ad614b44109e3c60afba3a3f0cd5ce4c110b1d4cae662479ded37c594ef5aa90 1186 main/binary-arm64/Packages
+ aff430c3d89298c2ab8e801b1f1fd23e2f0af08e8f54a0e633da0dfe0176569d 763 main/binary-arm64/Packages.gz
+ 5eaf2110af7382041050b29029ed6b9a36801d33dbaea74fbeae07baabd79eda 93 main/binary-arm64/Release
+ 4d470411ef221f6b681c6df09c7b9ece7d96a00a3bd91cb3c7e6423e5f60a635 1186 main/binary-armhf/Packages
+ 5bb222ff7a1c31d14dfd100d6c72d37320a49cb3f218a7d95e4af5246e0e93a6 764 main/binary-armhf/Packages.gz
+ 33dc2b2d77a26b6cee1ba0ad90ea4e9b7eabd99f4e93af79c4417f4734bae989 93 main/binary-armhf/Release
+ 0e5972524da9761167df0c147f96e97176704e9c89a4d1b4dcad540cebbe0597 1186 main/binary-armel/Packages
+ 9ec8c0c5b9db52c914e213da77f252c8a7ca6d8498889f26928cae5d074137b1 765 main/binary-armel/Packages.gz
+ 104261c14f7880eac6c229702b81d36b551cbbb17ec005523741ef86d107697e 93 main/binary-armel/Release

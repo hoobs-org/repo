@@ -1,0 +1,23 @@
+Origin: HOOBS
+Label: HOOBS
+Codename: stable
+Architectures: amd64 i386 arm64 armhf armel
+Components: main
+Description: HOOBS Repository
+SignWith: hoobs
+
+Origin: HOOBS
+Label: HOOBS
+Codename: edge
+Architectures: amd64 i386 arm64 armhf armel
+Components: main
+Description: HOOBS Repository
+SignWith: hoobs
+
+Origin: HOOBS
+Label: HOOBS
+Codename: bleeding
+Architectures: amd64 i386 arm64 armhf armel
+Components: main
+Description: HOOBS Repository
+SignWith: hoobs
