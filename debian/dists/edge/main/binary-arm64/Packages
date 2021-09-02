@@ -1,3 +1,19 @@
+Package: hbs-portal
+Version: 1.0.0
+Architecture: all
+Installed-Size: 65
+Depends: nodejs (>= 14.15.0)
+Maintainer: HOOBS Maintainers <info@hoobs.com>
+Homepage: https://hoobs.com
+Priority: optional
+Section: base
+Filename: pool/main/h/hbs-portal/hbs-portal_1.0.0_all.deb
+Size: 1038204
+SHA256: 0437bcac61ddb1c41356117a1f5074eb27268e34b4b74976b9c2f992cd1ee8c4
+SHA1: cf79fe0478a57cda1c326f701de72170f0b25736
+MD5sum: f5eb0d8ba4961e8ea950e5300832db30
+Description: HOOBS Capitive WiFi Portal
+
 Package: nodejs
 Version: 14.17.6-hoobs
 Architecture: arm64
