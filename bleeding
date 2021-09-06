@@ -3,6 +3,7 @@
 export DEBIAN_FRONTEND=noninteractive
 
 RELEASE="bleeding"
+DISTRO=$(lsb_release -c -s)
 NODE_REPO="node_14.x"
 
 try() {
@@ -56,8 +57,8 @@ setup() {
         execute "wget -q -O - https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null"
     fi
 
-    execute "echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODE_REPO} bullseye main' | tee /etc/apt/sources.list.d/nodesource.list"
-    execute "echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODE_REPO} bullseye main' | tee -a /etc/apt/sources.list.d/nodesource.list"
+    execute "echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODE_REPO} ${DISTRO} main' | tee /etc/apt/sources.list.d/nodesource.list"
+    execute "echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODE_REPO} ${DISTRO} main' | tee -a /etc/apt/sources.list.d/nodesource.list"
     execute "echo 'deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian/ stable main' | tee /etc/apt/sources.list.d/yarn.list"
     execute "echo 'deb [signed-by=/usr/share/keyrings/hoobs.gpg] https://dl.hoobs.org/debian/ ${RELEASE} main' | tee /etc/apt/sources.list.d/hoobs.list"
     execute 'apt-get update'
