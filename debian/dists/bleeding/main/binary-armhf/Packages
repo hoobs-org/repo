@@ -8,10 +8,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hbs-portal/hbs-portal_4.1.1_all.deb
-Size: 1032584
-SHA256: 32cde7fca45fce531c08266ccb9627b8abc4787df2bc1bc71d8502c51fd82ed4
-SHA1: c86a20ec177a3c6010902f7a41a39605d9a5c4df
-MD5sum: a257bddbc0e53fb4d92dc5130c9b7a19
+Size: 1038340
+SHA256: b6e32469fa9d9c2ec9bd72bd0e3ab9affc990e94e46a6d661e1426e08e85fe4e
+SHA1: 4d51d47ed368bfe1b1a9ecda7906df0462a40385
+MD5sum: 5511cd9cee6f589a613bce1dda441a80
 Description: HOOBS Capitive WiFi Portal
 
 Package: helm
@@ -24,9 +24,9 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/helm/helm_1.2.7_armhf.deb
-Size: 1825408
-SHA256: 5e39367ebce48bde3a08c5cf3046524a3df3fbe637a8991361df09862ba12eb3
-SHA1: 1af59dae6031fe1346d07a2d9f2b6045e55184d1
-MD5sum: bcdf754be8a409ac95d4caed324bc126
+Size: 1831360
+SHA256: b3711b576e5183ad7e615ff051799520fddbebaaac7cf51312b37be49d8c5b28
+SHA1: a8d07933a558588d698774121b791b288235140d
+MD5sum: a9d953410b6d2987e6e82f22b9a867b0
 Description: Recovery and remote console for Debian based systems.
 
