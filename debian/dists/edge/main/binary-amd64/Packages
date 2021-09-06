@@ -24,9 +24,9 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/helm/helm_2.1.1_amd64.deb
-Size: 1832960
-SHA256: 44c14f25a1943f3c18396135b4566357647d59d23f95e9979750e17d72ea8ff7
-SHA1: 241567d9779a5cbeabd480ca09137c111133c7c8
-MD5sum: 8d6131bc7d02f1d512f9559ab620957b
+Size: 1833100
+SHA256: 00dd7a070cffa5452ecd5a25fb9a341eb6a450023739b9b50e8a509c5392cfda
+SHA1: e8d43a724dcf94e9dfcea09b1a2485bd9a0cf1e2
+MD5sum: d1ca52e2c922f51732025701af500658
 Description: Recovery and remote console for Debian based systems.
 
