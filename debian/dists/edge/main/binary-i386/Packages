@@ -8,9 +8,9 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hbs-portal/hbs-portal_4.1.1_all.deb
-Size: 1038592
-SHA256: be1cfaebc628c0d76ec481d7d0ce6ec3777e7b5d98472cacce5d0ee1e6e2abb4
-SHA1: b33c703f8b0077625eb354b6ed047b9ef3930065
-MD5sum: 4e6762b4815b8177a9cc8a728dd56e67
+Size: 1038464
+SHA256: 1198235f9ddfea63e0336f2b7c0ea836c7c7a32cae834c5ffd321c791d12bf16
+SHA1: ecaf57b2499493cf8737fd593c2ba98d4734b5e3
+MD5sum: bd72e04dc72a5ac0e293085e8130790d
 Description: HOOBS Capitive WiFi Portal
 
