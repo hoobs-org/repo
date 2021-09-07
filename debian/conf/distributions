@@ -1,7 +1,7 @@
 Origin: HOOBS
 Label: HOOBS
 Codename: stable
-Architectures: amd64 i386 arm64 armhf armel
+Architectures: amd64 arm64 armhf
 Components: main
 Description: HOOBS Repository
 SignWith: hoobs
@@ -9,7 +9,7 @@ SignWith: hoobs
 Origin: HOOBS
 Label: HOOBS
 Codename: edge
-Architectures: amd64 i386 arm64 armhf armel
+Architectures: amd64 arm64 armhf
 Components: main
 Description: HOOBS Repository
 SignWith: hoobs
@@ -17,7 +17,7 @@ SignWith: hoobs
 Origin: HOOBS
 Label: HOOBS
 Codename: bleeding
-Architectures: amd64 i386 arm64 armhf armel
+Architectures: amd64 arm64 armhf
 Components: main
 Description: HOOBS Repository
 SignWith: hoobs
