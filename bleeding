@@ -2,8 +2,8 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
+DISTRO="bullseye"
 RELEASE="bleeding"
-DISTRO=$(lsb_release -c -s)
 NODE_REPO="node_14.x"
 
 try() {
@@ -11,7 +11,7 @@ try() {
 }
 
 catch() {
-    echo 'Error executing command, exiting'
+    echo "error executing command"
 
     exit 1
 }
@@ -20,7 +20,99 @@ execute() {
     try "$1" || catch
 }
 
-setup() {
+alternates() {
+    if [ "|${DISTRO}|" == "|${1}|" ]; then
+        DISTRO="${2}"
+    fi
+}
+
+validate() {
+    if $(uname -m | grep -Eq ^armv6); then
+        echo "device specifies an unsupported architecture"
+
+        exit 1
+    fi
+
+    DISTRO=$(lsb_release -c -s)
+
+    alternates "solydxk-9" "stretch"
+    alternates "sana" "jessie"
+    alternates "kali-rolling" "bullseye"
+    alternates "Tyche" "stretch"
+    alternates "Nibiru" "buster"
+    alternates "Horizon" "stretch"
+    alternates "Continuum" "stretch"
+    alternates "patito feo" "buster"
+    alternates "maya" "precise"
+    alternates "qiana" "trusty"
+    alternates "rafaela" "trusty"
+    alternates "rebecca" "trusty"
+    alternates "rosa" "trusty"
+    alternates "sarah" "xenial"
+    alternates "serena" "xenial"
+    alternates "sonya" "xenial"
+    alternates "sylvia" "xenial"
+    alternates "tara" "bionic"
+    alternates "tessa" "bionic"
+    alternates "tina" "bionic"
+    alternates "tricia" "bionic"
+    alternates "ulyana" "focal"
+    alternates "ulyssa" "focal"
+    alternates "uma" "focal"
+    alternates "betsy" "jessie"
+    alternates "cindy" "stretch"
+    alternates "debbie" "buster"
+    alternates "luna" "precise"
+    alternates "freya" "trusty"
+    alternates "loki" "xenial"
+    alternates "juno" "bionic"
+    alternates "hera" "bionic"
+    alternates "odin" "focal"
+    alternates "toutatis" "precise"
+    alternates "belenos" "trusty"
+    alternates "flidas" "xenial"
+    alternates "etiona" "bionic"
+    alternates "lugalbanda" "xenial"
+    alternates "anokha" "wheezy"
+    alternates "anoop" "jessie"
+    alternates "drishti" "stretch"
+    alternates "unnati" "buster"
+    alternates "bunsen-hydrogen" "jessie"
+    alternates "helium" "stretch"
+    alternates "lithium" "buster"
+    alternates "chromodoris" "jessie"
+    alternates "green" "sid"
+    alternates "amber" "buster"
+    alternates "jessie" "jessie"
+    alternates "ascii" "stretch"
+    alternates "beowulf" "buster"
+    alternates "ceres" "sid"
+    alternates "panda" "sid"
+    alternates "unstable" "sid"
+    alternates "stable" "buster"
+    alternates "onyedi" "stretch"
+    alternates "lemur-3" "stretch"
+    alternates "orel" "stretch"
+    alternates "dolcetto" "stretch"
+
+    if [ "|${DISTRO}|" == "|debian|" ]; then
+        FOUND=$([ -e /etc/debian_version ] && cut -d/ -f1 < /etc/debian_version)
+
+        if [ "|${NEWDISTRO}|" != "||" ]; then
+            DISTRO=$FOUND
+        fi
+    fi
+
+    try "curl -sLf -o /dev/null 'https://deb.nodesource.com/${NODEREPO}/dists/${DISTRO}/Release'"
+
+    if [[ $? != 0 ]]; then
+        echo "device specifies an unsupported operating system"
+
+        exit 1
+    fi
+}
+
+prerequisites() {
     PREREQUISITES=""
 
     if [ ! -e /usr/lib/apt/methods/https ]; then
@@ -31,37 +123,39 @@ setup() {
         PREREQUISITES="${PREREQUISITES} lsb-release"
     fi
 
-    if [ ! -x /usr/bin/curl ] && [ ! -x /usr/bin/wget ]; then
+    if [ ! -x /usr/bin/curl ]; then
         PREREQUISITES="${PREREQUISITES} curl"
     fi
-
-    # Used by apt-key to add new keys
 
     if [ ! -x /usr/bin/gpg ]; then
         PREREQUISITES="${PREREQUISITES} gnupg"
     fi
 
-    execute 'apt-get update'
+    execute "apt-get update"
 
     if [ "|${PREREQUISITES}|" != "||" ]; then
         execute "apt-get install -y${PREREQUISITES} > /dev/null 2>&1"
     fi
+}
 
-    if [ -x /usr/bin/curl ]; then
-        execute "curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodesource.gpg > /dev/null"
-        execute "curl -s https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null"
-        execute "curl -s https://dl.hoobs.org/debian/pubkey.gpg.key | gpg --dearmor | tee /usr/share/keyrings/hoobs.gpg > /dev/null"
-    else
-        execute "wget -q -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/hoobs.gpg > /dev/null"
-        execute "wget -q -O - https://dl.hoobs.org/debian/pubkey.gpg.key | gpg --dearmor | tee /usr/share/keyrings/hoobs.gpg > /dev/null"
-        execute "wget -q -O - https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null"
+setup() {
+    if [ -f "/etc/apt/sources.list.d/chris-lea-node_js-$DISTRO.list" ]; then
+        try "add-apt-repository -y -r ppa:chris-lea/node.js"
+        execute "rm -f /etc/apt/sources.list.d/chris-lea-node_js-${DISTRO}.list"
     fi
+
+    execute "curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodesource.gpg > /dev/null"
+    execute "curl -s https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null"
+    execute "curl -s https://dl.hoobs.org/debian/pubkey.gpg.key | gpg --dearmor | tee /usr/share/keyrings/hoobs.gpg > /dev/null"
 
     execute "echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODE_REPO} ${DISTRO} main' | tee /etc/apt/sources.list.d/nodesource.list"
     execute "echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODE_REPO} ${DISTRO} main' | tee -a /etc/apt/sources.list.d/nodesource.list"
     execute "echo 'deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian/ stable main' | tee /etc/apt/sources.list.d/yarn.list"
     execute "echo 'deb [signed-by=/usr/share/keyrings/hoobs.gpg] https://dl.hoobs.org/debian/ ${RELEASE} main' | tee /etc/apt/sources.list.d/hoobs.list"
+
     execute 'apt-get update'
 }
 
+validate
+prerequisites
 setup

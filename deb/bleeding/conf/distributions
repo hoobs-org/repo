@@ -1,7 +1,0 @@
-Origin: HOOBS
-Label: HOOBS
-Codename: buster
-Architectures: i386 amd64 armhf
-Components: main
-Description: HOOBS Repository (Bleeding)
-SignWith: hoobs
