@@ -31,7 +31,7 @@ MD5sum: 2c55023639a3c08d2d35258a0dd0fd58
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-gui
-Version: 4.0.90
+Version: 4.1.1
 Architecture: all
 Installed-Size: 51
 Depends: hoobsd (>= 4.0.0), helm (>= 1.2.2)
@@ -39,10 +39,10 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-gui/hoobs-gui_4.0.90_all.deb
-Size: 13258020
-SHA256: 2ada514ffa2938db12f536efce84f2715f9768c417ae9f5ec7e13791e06fe4a7
-SHA1: faa36fb2e27ce991dd404ea9cab691f029c442d6
-MD5sum: 461e375b2645d0ad5141e592c2123b4c
+Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.1_all.deb
+Size: 13258996
+SHA256: c48431b8a69e9f6c1307e0e1c667e2488170a4a577608ad6981849031af9829d
+SHA1: 821a9f080ee0331f83c1e7c78c9466b712f779cb
+MD5sum: 4235ee89dc16a31c7209b79c6c7ac2dd
 Description: Interface component for the certified HOOBS stack.
 
