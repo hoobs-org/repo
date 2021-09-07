@@ -24,10 +24,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/helm/helm_2.1.1_armhf.deb
-Size: 1831368
-SHA256: 00a863729761fa12752ac7c570fee7b7a4a321d2ddfff9e9612df1632053f825
-SHA1: 1f3959ad420e76de898c9da2cab30f1ba23c0771
-MD5sum: 695484363e378f633b229b7d4f59b875
+Size: 1826176
+SHA256: 4231f4f3ccadaae51d872045c0382075351c637cd6d577a52a4f8b092511222a
+SHA1: 740f88f09e978b0fc439cb696567576f01d21ece
+MD5sum: 2c55023639a3c08d2d35258a0dd0fd58
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-gui
