@@ -24,10 +24,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/helm/helm_2.1.1_amd64.deb
-Size: 1827744
-SHA256: ddbc4403cdaab35c846afc3769adb061ff77f4d4bd3b4c676a4795d6218e576c
-SHA1: f3d0d3e3280fa37dd0e794bdad49f1851af4d54a
-MD5sum: e635407f4f38818c821fd288c7585473
+Size: 1837132
+SHA256: 9839b03ef9d15608193b7d76aeba4ee855aeb9dbf41e75ee7b896cd5649c491e
+SHA1: bcf6b730d45e1028a49271e4547c7856f8b89502
+MD5sum: 48a4ec252d9090ebadbd8a875a5ed6de
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-cli
@@ -40,10 +40,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.1_amd64.deb
-Size: 3628384
-SHA256: 08fe4c2926fb9cb968b03d114771433efd4d8e3f0db69aad8503e34020e2dd56
-SHA1: 213b61d745ffd38c0048b3dc480b7a2af0fef7f7
-MD5sum: 9c56115f9fcbd583a97e7a30cf3a03a2
+Size: 3640072
+SHA256: 5660cb218748a7d6e2c819cd874bb67105d0724ae35a3c87a59c2d6877abd11c
+SHA1: 343282c5cd0d1b18ec6e9a788d8fc175ce8f8a08
+MD5sum: 9b66d25ab1a0d1fe6d613a4871f18bb2
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
@@ -56,9 +56,9 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.1_all.deb
-Size: 13242592
-SHA256: 855f6425725c4b30e94012a969545ddb18e4e7aff82da266af92ae2c8d33b858
-SHA1: cdb6d937dfe1ba7c0db88ab78653d7a866c47471
-MD5sum: 671847f4855177fd20332dd0cd011965
+Size: 13243468
+SHA256: 3ee61d64eccc15997dc21c20b8fc069a355b046a50e653efa7a33aae89df4eff
+SHA1: 3c1a17eef0ce2eace312b4758ea57bdf1c39314f
+MD5sum: ed183c2317837a351288d185a04e99c1
 Description: Interface component for the certified HOOBS stack.
 
