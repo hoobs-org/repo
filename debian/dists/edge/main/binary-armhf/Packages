@@ -62,3 +62,19 @@ SHA1: 3c1a17eef0ce2eace312b4758ea57bdf1c39314f
 MD5sum: ed183c2317837a351288d185a04e99c1
 Description: Interface component for the certified HOOBS stack.
 
+Package: hoobsd
+Version: 4.1.1
+Architecture: armhf
+Installed-Size: 65
+Depends: nodejs (>= 14.15.0), lsof, git, python3, make, gcc, g++
+Maintainer: HOOBS Maintainers <info@hoobs.com>
+Homepage: https://hoobs.com
+Priority: optional
+Section: base
+Filename: pool/main/h/hoobsd/hoobsd_4.1.1_armhf.deb
+Size: 4232964
+SHA256: cefc2da23f076a791cb93d8f9a9613fc157b9993cd290273ba4ab1e7e9c0a35a
+SHA1: 9039d58f7e530469d3f72dadb45f55b715af65b0
+MD5sum: 75796d283bdb660438b0f10cd47a045d
+Description: Server component for the certified HOOBS smart home stack.
+
