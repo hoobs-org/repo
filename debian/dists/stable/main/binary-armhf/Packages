@@ -40,10 +40,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.1_armhf.deb
-Size: 3637100
-SHA256: 304cb459986a0d6b6bd5b5d2a437b1447611854b3d581a2da0a71ba58c88b84f
-SHA1: 1a1021f1ac11d57afac76d9123aa1e101722bbf8
-MD5sum: 1ae5e0d7bc25442e74f8b6e71dbd9b3e
+Size: 3637592
+SHA256: d38ba49f80e7a39820efe7588ab60de5958affadf75b92a459c71b51322e51e2
+SHA1: 23f5644a3a391166684042cc4333a80b43285f9d
+MD5sum: eab38a6fe1f7c1e98e97d535d301553c
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
@@ -56,10 +56,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.1_all.deb
-Size: 13243468
-SHA256: 3ee61d64eccc15997dc21c20b8fc069a355b046a50e653efa7a33aae89df4eff
-SHA1: 3c1a17eef0ce2eace312b4758ea57bdf1c39314f
-MD5sum: ed183c2317837a351288d185a04e99c1
+Size: 13244264
+SHA256: 89f49edd580c5315e8e80f849008eb5df12a471663f11d93647e562efe7381ac
+SHA1: 1578a0444c998cea761110f16d530ec1ddf6dec1
+MD5sum: 00aac24847bd4cbe8bb29d96ef3bd2fa
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
@@ -72,9 +72,9 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobsd/hoobsd_4.1.1_armhf.deb
-Size: 4232964
-SHA256: cefc2da23f076a791cb93d8f9a9613fc157b9993cd290273ba4ab1e7e9c0a35a
-SHA1: 9039d58f7e530469d3f72dadb45f55b715af65b0
-MD5sum: 75796d283bdb660438b0f10cd47a045d
+Size: 4232864
+SHA256: 2b5e8617984a1ebf4fce5a1baa999e9cfdff4ee3168fde5ed175419be88ea733
+SHA1: 886b37e059d781826f7847724838eef4cd7c381a
+MD5sum: 0749e49fa917e9253b3b7c85b010408d
 Description: Server component for the certified HOOBS smart home stack.
 
