@@ -72,9 +72,9 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobsd/hoobsd_4.1.1_armhf.deb
-Size: 4233356
-SHA256: 3356ce3223b6d44ffc970e43881cd194a5cc15b42537df4a752f9b82f5b226be
-SHA1: b387f93b7f1096eda757fd3ddef4299f2e54443e
-MD5sum: d8cea51f6d6bce45cb3f48814d583577
+Size: 4228164
+SHA256: f0e56b2c34b98bedd6895075a626afd5a32be4b4eb898ae532658d0790ba7cb4
+SHA1: 793e455d56ef9526d95c922e9d3d931e7ebc3c86
+MD5sum: 7475cc59b9875e2d16abf5dfb5ba12b2
 Description: Server component for the certified HOOBS smart home stack.
 
