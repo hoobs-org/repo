@@ -8,10 +8,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hbs-portal/hbs-portal_4.1.1_all.deb
-Size: 1037300
-SHA256: 45839a5cab3a59ba7cad4716a491053542e680abc56f22eb4ff221c576cdec03
-SHA1: 1d17c4aa51129a2d1cc0686bac49bc29dff3ab29
-MD5sum: 6ee7317ed977740e5956fe3858ede62b
+Size: 1038896
+SHA256: 2b2d1edb2f035f7b2a00d107641fe337940d855b8f9670e9e563aaac30b778b4
+SHA1: c390a4736bfe80b402b01dafefec6d693a5ab786
+MD5sum: f6b588e403b49159ad52dd5008620d47
 Description: HOOBS Capitive WiFi Portal
 
 Package: helm
@@ -40,10 +40,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.1_amd64.deb
-Size: 3640472
-SHA256: 7bac396bb2d6448472d28271e059d869850e6fb45c4807aad93f6f42558dd5f5
-SHA1: fbd9db323b28f4491559749f2d741aca3395f006
-MD5sum: 5abe677371402315c58ae0dde6980c0c
+Size: 3647048
+SHA256: 81d3e3faa36bd7fa0e9c82a96a1c4caa168cef6734ef96b1f03b4c329a3b16d6
+SHA1: 7ad86724c6e861dfaeb1d128d83de631560bf1d3
+MD5sum: 20c0accd3906c258b15fa9a64fb3483b
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
@@ -56,10 +56,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.1_all.deb
-Size: 13244112
-SHA256: 9ffdc8a6c2cc35f4adef14e3c71a3a0321d117e06ed92df20012bc3f7a2658e3
-SHA1: 58ca57b471efd165c309c50e8b9899f4240c3313
-MD5sum: 24f9760936e52b7592128f118657a3e9
+Size: 13245084
+SHA256: 57cad4af3648ccdb8ecdf9b74c85d561a7ca6029aefd2a557ed2da6104f70bc3
+SHA1: 25959cdccefb611857cd7ac17b01b69a04e772c0
+MD5sum: 35497084fcc0f4975ed2b4681ade4e5e
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
@@ -72,9 +72,9 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobsd/hoobsd_4.1.1_amd64.deb
-Size: 4227944
-SHA256: 76d536f63b823e171f5eb2b1f93a54a5752b35023a07099d4d1955fede1dd3de
-SHA1: 139f9433144e1a5dea304ff6484e9d98e7c380ed
-MD5sum: 3194b09378ca801efe48c8ffcdb7e553
+Size: 4234120
+SHA256: c4ec6d5e674cc85e360a84381bb4a93f78e3357406ba2213b468fddd950405e0
+SHA1: 4cd3e79e2bdfc3355121477d92a3a2cb0a3c6a53
+MD5sum: 31582db3183dc400ec181e938ad1a76a
 Description: Server component for the certified HOOBS smart home stack.
 

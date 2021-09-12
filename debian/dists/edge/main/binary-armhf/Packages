@@ -8,10 +8,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hbs-portal/hbs-portal_4.1.1_all.deb
-Size: 1037300
-SHA256: 45839a5cab3a59ba7cad4716a491053542e680abc56f22eb4ff221c576cdec03
-SHA1: 1d17c4aa51129a2d1cc0686bac49bc29dff3ab29
-MD5sum: 6ee7317ed977740e5956fe3858ede62b
+Size: 1038896
+SHA256: 2b2d1edb2f035f7b2a00d107641fe337940d855b8f9670e9e563aaac30b778b4
+SHA1: c390a4736bfe80b402b01dafefec6d693a5ab786
+MD5sum: f6b588e403b49159ad52dd5008620d47
 Description: HOOBS Capitive WiFi Portal
 
 Package: helm
@@ -40,10 +40,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.1_armhf.deb
-Size: 3637884
-SHA256: 794a2d7796fd8ae77d4d7b73343187ee77efbc91ef94f04763472a6ca35e2822
-SHA1: e1ba6d47aec6a773a4517115937ed9b4e0133db9
-MD5sum: 7b6fdc4273a563fa36af8373c2284329
+Size: 3645248
+SHA256: fab9eafe4e67cca8521590e612fa199809829664339de0598b91e88cc48f445d
+SHA1: 6ef26ae29b8424c527622b0164d6bd6f90c1bde2
+MD5sum: c7930c2f569c5724e8bce33c1339fa29
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
@@ -56,10 +56,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.1_all.deb
-Size: 13244112
-SHA256: 9ffdc8a6c2cc35f4adef14e3c71a3a0321d117e06ed92df20012bc3f7a2658e3
-SHA1: 58ca57b471efd165c309c50e8b9899f4240c3313
-MD5sum: 24f9760936e52b7592128f118657a3e9
+Size: 13245084
+SHA256: 57cad4af3648ccdb8ecdf9b74c85d561a7ca6029aefd2a557ed2da6104f70bc3
+SHA1: 25959cdccefb611857cd7ac17b01b69a04e772c0
+MD5sum: 35497084fcc0f4975ed2b4681ade4e5e
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
@@ -72,9 +72,9 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobsd/hoobsd_4.1.1_armhf.deb
-Size: 4228164
-SHA256: f0e56b2c34b98bedd6895075a626afd5a32be4b4eb898ae532658d0790ba7cb4
-SHA1: 793e455d56ef9526d95c922e9d3d931e7ebc3c86
-MD5sum: 7475cc59b9875e2d16abf5dfb5ba12b2
+Size: 4234496
+SHA256: 4be028dafb5dd5b9da1d0a227714fe98a7a36a2817b77976f6c625d7037d5a80
+SHA1: f0aafc1a47e9b0329766365030ab3415eeeaf255
+MD5sum: 64f75aec336e17a46bec5f77d20c81bb
 Description: Server component for the certified HOOBS smart home stack.
 
