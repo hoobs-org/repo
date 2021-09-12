@@ -56,10 +56,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.1_all.deb
-Size: 13245084
-SHA256: 57cad4af3648ccdb8ecdf9b74c85d561a7ca6029aefd2a557ed2da6104f70bc3
-SHA1: 25959cdccefb611857cd7ac17b01b69a04e772c0
-MD5sum: 35497084fcc0f4975ed2b4681ade4e5e
+Size: 13245548
+SHA256: e11d80a8a7049d553d920404d5576abe05fd777393e352e438b6107f4addf726
+SHA1: 4b8b4716ef177be95a1d3ef5293dfcebbd350166
+MD5sum: cc72317807be96b631da94831299c6a5
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
