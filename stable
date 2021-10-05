@@ -26,6 +26,16 @@ alternates() {
     fi
 }
 
+reset() {
+    rm -f /usr/share/keyrings/nodesource.gpg
+    rm -f /usr/share/keyrings/yarnkey.gpg
+    rm -f /usr/share/keyrings/hoobs.gpg
+
+    rm -f /etc/apt/sources.list.d/nodesource.list
+    rm -f /etc/apt/sources.list.d/yarn.list
+    rm -f /etc/apt/sources.list.d/hoobs.list
+}
+
 validate() {
     if $(uname -m | grep -Eq ^armv6); then
         echo "device specifies an unsupported architecture"
@@ -148,7 +158,7 @@ setup() {
 
     execute "curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodesource.gpg > /dev/null"
     execute "curl -s https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null"
-    execute "curl -s https://dl.hoobs.org/deb/key.gpg | gpg --dearmor | tee /usr/share/keyrings/hoobs.gpg > /dev/null"
+    execute "curl -s https://dl.hoobs.org/debian/pubkey.gpg.key | gpg --dearmor | tee /usr/share/keyrings/hoobs.gpg > /dev/null"
 
     execute "echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODEREPO} ${DISTRO} main' | tee /etc/apt/sources.list.d/nodesource.list"
     execute "echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODEREPO} ${DISTRO} main' | tee -a /etc/apt/sources.list.d/nodesource.list"
@@ -159,6 +169,7 @@ setup() {
 }
 
 validate
+reset
 prerequisites
 availability
 setup

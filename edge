@@ -26,6 +26,16 @@ alternates() {
     fi
 }
 
+reset() {
+    rm -f /usr/share/keyrings/nodesource.gpg
+    rm -f /usr/share/keyrings/yarnkey.gpg
+    rm -f /usr/share/keyrings/hoobs.gpg
+
+    rm -f /etc/apt/sources.list.d/nodesource.list
+    rm -f /etc/apt/sources.list.d/yarn.list
+    rm -f /etc/apt/sources.list.d/hoobs.list
+}
+
 validate() {
     if $(uname -m | grep -Eq ^armv6); then
         echo "device specifies an unsupported architecture"
@@ -159,6 +169,7 @@ setup() {
 }
 
 validate
+reset
 prerequisites
 availability
 setup
