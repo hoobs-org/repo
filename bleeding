@@ -102,7 +102,9 @@ validate() {
             DISTRO=$FOUND
         fi
     fi
+}
 
+availability() {
     try "curl -sLf -o /dev/null 'https://deb.nodesource.com/${NODEREPO}/dists/${DISTRO}/Release'"
 
     if [[ $? != 0 ]]; then
@@ -131,7 +133,7 @@ prerequisites() {
         PREREQUISITES="${PREREQUISITES} gnupg"
     fi
 
-    execute "apt-get update"
+    execute "apt-get update --allow-releaseinfo-change"
 
     if [ "|${PREREQUISITES}|" != "||" ]; then
         execute "apt-get install -y${PREREQUISITES} > /dev/null 2>&1"
@@ -158,4 +160,5 @@ setup() {
 
 validate
 prerequisites
+availability
 setup
