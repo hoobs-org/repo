@@ -7,7 +7,7 @@ HOOBS software repository.
 First add the HOOBS repository to your sources.
 
 ```sh
-wget -qO- https://dl.hoobs.org/stable | sudo -E bash -
+wget -qO- https://dl.hoobs.org/stable | sudo bash -
 ```
 
 Now you can install hoobsd and the HOOBS CLI.
