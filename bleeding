@@ -156,9 +156,9 @@ setup() {
         execute "rm -f /etc/apt/sources.list.d/chris-lea-node_js-${DISTRO}.list"
     fi
 
-    execute "curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodesource.gpg > /dev/null"
-    execute "curl -s https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null"
-    execute "curl -s https://dl.hoobs.org/debian/pubkey.gpg.key | gpg --dearmor | tee /usr/share/keyrings/hoobs.gpg > /dev/null"
+    execute "curl -ks https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodesource.gpg > /dev/null"
+    execute "curl -ks https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null"
+    execute "curl -ks https://dl.hoobs.org/debian/pubkey.gpg.key | gpg --dearmor | tee /usr/share/keyrings/hoobs.gpg > /dev/null"
 
     execute "echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODEREPO} ${DISTRO} main' | tee /etc/apt/sources.list.d/nodesource.list"
     execute "echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODEREPO} ${DISTRO} main' | tee -a /etc/apt/sources.list.d/nodesource.list"
