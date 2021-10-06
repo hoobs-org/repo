@@ -125,7 +125,7 @@ availability() {
 }
 
 prerequisites() {
-    PREREQUISITES=""
+    PREREQUISITES="ca-certificates"
 
     if [ ! -e /usr/lib/apt/methods/https ]; then
         PREREQUISITES="${PREREQUISITES} apt-transport-https"
