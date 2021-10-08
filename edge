@@ -125,7 +125,7 @@ availability() {
 }
 
 prerequisites() {
-    PREREQUISITES=" ca-certificates"
+    PREREQUISITES=" ca-certificates libgnutls30"
 
     if [ ! -e /usr/lib/apt/methods/https ]; then
         PREREQUISITES="${PREREQUISITES} apt-transport-https"
