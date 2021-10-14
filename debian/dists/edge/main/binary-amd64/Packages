@@ -31,7 +31,7 @@ MD5sum: 10898d36460c126e1c00252522006de5
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-cli
-Version: 4.1.2
+Version: 4.1.4
 Architecture: amd64
 Installed-Size: 51
 Depends: nodejs (>= 14.15.0), git, python3, make, gcc, g++
@@ -39,11 +39,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.2_amd64.deb
-Size: 3667896
-SHA256: 450aaf8fe080528863cca09a00a16f1191dc45cfa523de3b21097c82ebe3594c
-SHA1: a08ba68ee0499ac71f970229e9a3728d95b7ad8f
-MD5sum: 8d08a0a3ae4baf7b9fa4bffc1a431528
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.4_amd64.deb
+Size: 3667640
+SHA256: 88ec4d61520f99c46e609a094a26217a0f2987e6a50747d0e24e2ac698f3240b
+SHA1: 7466ccc766a8d6804b598af8deac828ceff58012
+MD5sum: ba0f2a8a3946c1e7f7b48171fc656eec
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
@@ -63,7 +63,7 @@ MD5sum: 5e2753e38aa66b90185b2a6a5edde8b2
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 4.1.3
+Version: 4.1.4
 Architecture: amd64
 Installed-Size: 65
 Depends: nodejs (>= 14.15.0), lsof, git, python3, make, gcc, g++
@@ -71,10 +71,10 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_4.1.3_amd64.deb
-Size: 4984180
-SHA256: c567eace801098d542d293f0e270b08e6c5e87d6586962cc41caac2858ea9542
-SHA1: 6534479e12f6ca55dcce2115ed9ceba5282e5dd0
-MD5sum: 4da539c6a7dd93d8387927f3b3ae146a
+Filename: pool/main/h/hoobsd/hoobsd_4.1.4_amd64.deb
+Size: 4984096
+SHA256: d59ec4a8e7f0fc7b6cc979602fc51da1a0a97d5d2545eb373439a427e4e1866c
+SHA1: 19a58bcc22020cd5057f4e6aed857063979d7e67
+MD5sum: 95e221b58d757b8c256d4d7ad36b4d93
 Description: Server component for the certified HOOBS smart home stack.
 
