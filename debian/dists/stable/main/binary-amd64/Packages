@@ -1,5 +1,5 @@
 Package: hbs-portal
-Version: 4.1.1
+Version: 4.1.3
 Architecture: all
 Installed-Size: 65
 Depends: nodejs (>= 14.15.0), dnsmasq, hostapd
@@ -7,15 +7,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hbs-portal/hbs-portal_4.1.1_all.deb
-Size: 1038896
-SHA256: 2b2d1edb2f035f7b2a00d107641fe337940d855b8f9670e9e563aaac30b778b4
-SHA1: c390a4736bfe80b402b01dafefec6d693a5ab786
-MD5sum: f6b588e403b49159ad52dd5008620d47
+Filename: pool/main/h/hbs-portal/hbs-portal_4.1.3_all.deb
+Size: 1045736
+SHA256: 0a31dc4e6f835e0ea0a2a61b313ecfc69255ea1aa70d1b0e7e2ae20fef56edeb
+SHA1: 37f8ae9e872add67fa7cdcb2fd7581b587380d45
+MD5sum: 726a33716a18cd4a629055411440ea78
 Description: HOOBS Capitive WiFi Portal
 
 Package: helm
-Version: 2.1.1
+Version: 2.1.2
 Architecture: amd64
 Installed-Size: 65
 Depends: nodejs (>= 14.15.0), libpam-dev, python3, make, gcc, g++
@@ -23,15 +23,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/helm/helm_2.1.1_amd64.deb
-Size: 1837132
-SHA256: 9839b03ef9d15608193b7d76aeba4ee855aeb9dbf41e75ee7b896cd5649c491e
-SHA1: bcf6b730d45e1028a49271e4547c7856f8b89502
-MD5sum: 48a4ec252d9090ebadbd8a875a5ed6de
+Filename: pool/main/h/helm/helm_2.1.2_amd64.deb
+Size: 1846344
+SHA256: 8b6559b97d54c62ab563c0eeaa7cb00d11020548f0c66d52908574b9cec17e08
+SHA1: 016b4ff4bd30570ea11ffd2a656d9fc52a799177
+MD5sum: 10898d36460c126e1c00252522006de5
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-cli
-Version: 4.1.1
+Version: 4.1.5
 Architecture: amd64
 Installed-Size: 51
 Depends: nodejs (>= 14.15.0), git, python3, make, gcc, g++
@@ -39,15 +39,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.1_amd64.deb
-Size: 3667780
-SHA256: 7a7e5864c668e4394251c7f481feb46b8f6c057f184a7ad508229e9f05eb9016
-SHA1: d794f2c40a48fc23160e5385d54cda118c7f6799
-MD5sum: a04ded5f4d8b22235b0288f792edf95f
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.5_amd64.deb
+Size: 3672564
+SHA256: 67f74c5f2684417b296b631eef137dbbe104cb1c810c6cad54df3c2d06dbc924
+SHA1: ac6635cec2674593ed30bce3e472e54fdc00d3ef
+MD5sum: 67cfef1e1f6cc542358a5b5ae5478c8e
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
-Version: 4.1.1
+Version: 4.1.5
 Architecture: all
 Installed-Size: 51
 Depends: hoobsd (>= 4.0.0), helm (>= 1.2.2)
@@ -55,15 +55,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.1_all.deb
-Size: 13246964
-SHA256: ae8ed13e0a674a80ea7f6ab59e6eb8c4a45053556dfe7468c9d033b812ca252e
-SHA1: ef6a7dd655e7adefa99e7f95370706e93b820217
-MD5sum: 22551a95a1b94938948450ef6fb16e9c
+Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.5_all.deb
+Size: 13250276
+SHA256: a391079123e43fbe2ad85cc64fb26f71490b5f3bc64000d5cef8f431398e9a4a
+SHA1: 84e74ddcf67953018d7e5e1ebec86d30277b1107
+MD5sum: 0148fc558d818575c7785f73df4eef4d
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 4.1.1
+Version: 4.1.5
 Architecture: amd64
 Installed-Size: 65
 Depends: nodejs (>= 14.15.0), lsof, git, python3, make, gcc, g++
@@ -71,10 +71,10 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_4.1.1_amd64.deb
-Size: 5016672
-SHA256: fb29cdb4c22084456bb19fb03e4f9fd94488458e0bbb2797131bb4b2bc5359c1
-SHA1: a00e1fe62e34e6238f2e48e2ee2e1f270d5314c6
-MD5sum: 1317b25f43284f6f081f242af47efd10
+Filename: pool/main/h/hoobsd/hoobsd_4.1.5_amd64.deb
+Size: 4976436
+SHA256: 13854a3ea2f5eca99995f5d4bbed6eb1294d6910d89c919e0005464ce60a52bf
+SHA1: 05ee2cdca08ca1dd48aff845a8260e216742a6cb
+MD5sum: 5407017993128a00ffc67b102fe75691
 Description: Server component for the certified HOOBS smart home stack.
 
