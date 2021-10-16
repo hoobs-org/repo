@@ -1,3 +1,20 @@
+Package: deconz
+Version: 2.12.06-hoobs
+Architecture: arm64
+Depends: libqt5core5a, libqt5network5, libqt5widgets5, libqt5gui5, libqt5serialport5, libqt5websockets5, libqt5sql5, libcap2-bin, sqlite3, lsof, curl
+Installed-Size: 37440
+Maintainer: Manuel Pietschmann <manuel.pietschmann@dresden-elektronik.de>
+Homepage: http://www.dresden-elektronik.de
+Priority: extra
+Section: non-free / misc
+Filename: pool/main/d/deconz/deconz_2.12.06-hoobs_arm64.deb
+Size: 6394488
+SHA256: 45184c46154adc736b2301c5bb8556f7abff97aa3be99db07731c42e415fb09b
+SHA1: f0c5e6448c296357841b7433985a2d9fb324169a
+MD5sum: 4cda670d8d50726cc83ebc5d09fa718b
+Description: A generic ZigBee monitoring and control tool
+  The deCONZ application allows to monitor and control arbitrary ZigBee PRO based devices.
+
 Package: hbs-portal
 Version: 4.1.4
 Architecture: all
