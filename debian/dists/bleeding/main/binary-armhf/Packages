@@ -95,6 +95,21 @@ SHA1: 4d63647fb06b6edaa171f948b6673eda72351423
 MD5sum: 0b86d37cfb5337117c2061c9f9d7dd82
 Description: Server component for the certified HOOBS smart home stack.
 
+Package: hyperion
+Version: 2.0.0-alpha.11-hoobs
+Architecture: armhf
+Depends: libcec6 | libcec4
+Installed-Size: 162743
+Maintainer: packages@hyperion-project.org
+Priority: optional
+Section: Miscellaneous
+Filename: pool/main/h/hyperion/hyperion_2.0.0-alpha.11-hoobs_armhf.deb
+Size: 25503426
+SHA256: 3334721084c8706b88099360c5ab1bb467c03ab829cb2f83963af136096f9496
+SHA1: 317c31c0310723cc2bd9b59700548bc32e5e865e
+MD5sum: 06c9348f3dad0f408b7c498e93bc41a1
+Description: Hyperion is an open source ambient light implementation
+
 Package: soma-connect
 Version: 2.2.8
 Architecture: armhf
