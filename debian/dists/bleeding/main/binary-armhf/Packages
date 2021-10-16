@@ -78,3 +78,17 @@ SHA1: 4d63647fb06b6edaa171f948b6673eda72351423
 MD5sum: 0b86d37cfb5337117c2061c9f9d7dd82
 Description: Server component for the certified HOOBS smart home stack.
 
+Package: soma-connect
+Version: 2.2.8
+Architecture: armhf
+Depends: ifplugd
+Maintainer: SOMA <support@somasmarthome.com>
+Priority: optional
+Section: base
+Filename: pool/main/s/soma-connect/soma-connect_2.2.8_armhf.deb
+Size: 66340304
+SHA256: 9d8463a5c3c0faa87ac973fd9d71ecbadb158454aa61833ef64bac6cc33983c1
+SHA1: fbc4fae600ac9bbe4ce2d5f575819d0fff843f06
+MD5sum: 31fac69d9d6d3236bad73dc76c113a44
+Description: SOMA Connect
+
