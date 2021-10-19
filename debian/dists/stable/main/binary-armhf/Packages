@@ -32,7 +32,7 @@ MD5sum: 638d8a775376401fa41d897a1bccc2e8
 Description: HOOBS Capitive WiFi Portal
 
 Package: helm
-Version: 2.1.2
+Version: 2.1.3
 Architecture: armhf
 Installed-Size: 65
 Depends: nodejs (>= 14.15.0), libpam-dev, python3, make, gcc, g++
@@ -40,11 +40,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/helm/helm_2.1.2_armhf.deb
-Size: 1844844
-SHA256: 341b2523cca5482c1da7835749ba17b7943aaac2ecf91c69df6f4e7d2139f087
-SHA1: 1859121df71d54858f9b4a473808b15a70f8fb17
-MD5sum: 9b128719ebdec7504a2757813a7d0a4d
+Filename: pool/main/h/helm/helm_2.1.3_armhf.deb
+Size: 1844688
+SHA256: 28832141316c45cbbe5940f35beaedabf36609fa08f365daf86d05cdad7e83be
+SHA1: 70c41d9ef7e10f2a92ebef34368c9f796d6fe725
+MD5sum: f9d74ddcc8c23525cb3c6cfe93ca4996
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-cli
