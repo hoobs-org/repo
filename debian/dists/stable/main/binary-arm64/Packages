@@ -40,10 +40,10 @@ Homepage: https://hoobs.com
 Priority: optional
 Section: base
 Filename: pool/main/h/hbs-vendor/hbs-vendor_4.1.9_all.deb
-Size: 2460
-SHA256: 4d44ab0f73a4a4f2beb1b0344552e9c3ff3ef9150a9b29c3a58f79e79bf9698f
-SHA1: cb6b76a49e11845781f7f8936a0b45c991bbbcc9
-MD5sum: 132f81eb7d6a3f9562600012ee51fb78
+Size: 2512
+SHA256: 2b0cddd6ed93ee774ca3991ca1cf1e397b5c4c63781172e4b372df820b65c0a9
+SHA1: bae38b3ff2658187a41ad4d4e0e48113257cdcdd
+MD5sum: e87ed26e7daaeee1bae686f33b5a211e
 Description: HOOBS motd and issue files.
 
 Package: helm
