@@ -48,7 +48,7 @@ MD5sum: 9b128719ebdec7504a2757813a7d0a4d
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-cli
-Version: 4.1.7
+Version: 4.1.9
 Architecture: armhf
 Installed-Size: 51
 Depends: nodejs (>= 14.15.0), git, python3, make, gcc, g++
@@ -56,15 +56,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.7_armhf.deb
-Size: 3674808
-SHA256: c69f9442e6ebbeed42d58036bf42137789a512e873e7243822b8b582ae797150
-SHA1: d6f05b8138d4b9c1883f475f33236d99faf5ee02
-MD5sum: 9c530be8e02da6d6e47597350dab3d56
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.9_armhf.deb
+Size: 3674852
+SHA256: cb21266d7c42d6d6de82ef44f10c12df2846421beeff63be56657213f7b50e8f
+SHA1: f38316af64ace4684773013f504ef8205f8629a1
+MD5sum: aafc3616e8e21b81f181eb13feb6e5d5
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
-Version: 4.1.8
+Version: 4.1.9
 Architecture: all
 Installed-Size: 51
 Depends: hoobsd (>= 4.0.0), helm (>= 1.2.2)
@@ -72,15 +72,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.8_all.deb
-Size: 13251696
-SHA256: e4bd1b11f405b7211dec9e0e4e432c6e58c7592fa88f6af20e77a5d2bac0a692
-SHA1: ee3e9f606ee8b73c7e92b7c95ebae0556d12db21
-MD5sum: ad79b3525db897e2beda2f380abe897b
+Filename: pool/main/h/hoobs-gui/hoobs-gui_4.1.9_all.deb
+Size: 13251160
+SHA256: 4b11f2f451ad7916bdbbcf6066153390188ef81a790a3b76aa690ce8b57957f2
+SHA1: 933915f3392a1a5930c930faad848f20aa3425cf
+MD5sum: b87e9d1d22a8cd7b472ac135ba6789e4
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 4.1.7
+Version: 4.1.9
 Architecture: armhf
 Installed-Size: 65
 Depends: nodejs (>= 14.15.0), lsof, git, python3, make, gcc, g++
@@ -88,11 +88,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_4.1.7_armhf.deb
-Size: 4977664
-SHA256: a33bcfa6b247bb31c11041a20687dc53976916faf3ad7c273ca4550a731f4467
-SHA1: 4d63647fb06b6edaa171f948b6673eda72351423
-MD5sum: 0b86d37cfb5337117c2061c9f9d7dd82
+Filename: pool/main/h/hoobsd/hoobsd_4.1.9_armhf.deb
+Size: 4978056
+SHA256: a68ef9ad604d4609a81baa86b04ea6c68e5728810b34b61078808829e7e2e04c
+SHA1: 91c5a4d38c50ac97091d93a0518da662f7c0e950
+MD5sum: 0c48beeac600b1c8d71b5459da6554e3
 Description: Server component for the certified HOOBS smart home stack.
 
 Package: hyperion
