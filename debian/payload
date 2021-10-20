@@ -55,8 +55,7 @@ if [ -f /etc/systemd/system/wifi-connect.service ]; then
 fi
 
 printf "\033[0;36mRemove stuck HOOBS installs\033[0m\n"
-dpkg --configure -a
-apt-get remove -y hoobsd hoobs-cli hoobs-gui helm hbs-vendor
+apt-get remove -y hoobsd hoobs-cli hoobs-gui
 
 printf "\033[0;36mReload systemd\033[0m\n"
 
