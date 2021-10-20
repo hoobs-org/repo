@@ -6,6 +6,10 @@ rm -f /etc/apt/sources.list.d/hoobs.list
 rm -f /etc/apt/sources.list.d/nodesource.list
 rm -f /etc/apt/sources.list.d/yarn.list
 
+printf "\033[0;36mClean package manager\033[0m\n"
+apt-get clean
+sudo apt-get autoclean
+
 printf "\033[0;36mRemove manually installed Node binaries\033[0m\n"
 
 rm -f /usr/local/bin/node
@@ -34,7 +38,6 @@ rm -f /etc/systemd/system/multi-user.target.wants/hoobs-arch-check.service
 
 printf "\033[0;36mRemove NGINX\033[0m\n"
 
-apt-get -f install
 systemctl stop nginx.service || true
 systemctl disable nginx.service || true
 apt-get remove -y nginx-full nginx
@@ -57,7 +60,6 @@ fi
 
 printf "\033[0;36mRemove stuck HOOBS installs\033[0m\n"
 
-apt-get -f install
 apt-get remove -y hoobsd hoobs-cli hoobs-gui
 
 printf "\033[0;36mReload systemd\033[0m\n"
