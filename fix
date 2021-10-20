@@ -5,4 +5,3 @@ chmod 755 /root/hoobs-fix.sh
 touch /root/hoobs-fix.log
 ~/hoobs-fix.sh > /root/hoobs-fix.log 2>&1 &
 tail -n 5000 -f /root/hoobs-fix.log
-
