@@ -1,16 +1,19 @@
 #!/bin/bash
 
 printf "\033[0;36mRemove 3rd party sources\033[0m\n"
+
 rm -f /etc/apt/sources.list.d/hoobs.list
 rm -f /etc/apt/sources.list.d/nodesource.list
 rm -f /etc/apt/sources.list.d/yarn.list
 
 printf "\033[0;36mRemove manually installed Node binaries\033[0m\n"
+
 rm -f /usr/local/bin/node
 rm -f /usr/local/bin/npm
 rm -f /usr/local/bin/npx
 
 printf "\033[0;36mRemove manually installed Node files\033[0m\n"
+
 rm -fR /usr/local/include/node
 rm -fR /usr/local/lib/node_modules
 rm -fR /usr/local/share/doc/node
@@ -18,22 +21,26 @@ rm -f /usr/local/share/man/man1/node.1
 rm -f /usr/local/share/systemtap/tapset/node.stp
 
 printf "\033[0;36mRemove services\033[0m\n"
+
 rm -f /etc/systemd/system/homebridge-config-ui-x.service
 rm -f /etc/systemd/system/homebridge.service
 rm -f /etc/systemd/system/hoobs-arch-check.service
 
 printf "\033[0;36mRemove service wants\033[0m\n"
+
 rm -f /etc/systemd/system/multi-user.target.wants/homebridge-config-ui-x.service
 rm -f /etc/systemd/system/multi-user.target.wants/homebridge.service
 rm -f /etc/systemd/system/multi-user.target.wants/hoobs-arch-check.service
 
 printf "\033[0;36mRemove NGINX\033[0m\n"
+
 systemctl stop nginx.service || true
 systemctl disable nginx.service || true
 apt-get remove -y nginx-full nginx
 
-printf "\033[0;36mReconfigure Wi-Fi Connect\033[0m\n"
 if [ ! -f /etc/systemd/system/wifi-connect.service ]; then
+    printf "\033[0;36mReconfigure Wi-Fi Connect\033[0m\n"
+
     echo '[Unit]' | tee /etc/systemd/system/wifi-connect.service
     echo 'Description=WiFi Captive Portal' | tee -a /etc/systemd/system/wifi-connect.service
     echo 'After=NetworkManager.service' | tee -a /etc/systemd/system/wifi-connect.service
@@ -48,24 +55,32 @@ if [ ! -f /etc/systemd/system/wifi-connect.service ]; then
 fi
 
 printf "\033[0;36mReload systemd\033[0m\n"
+
 systemctl daemon-reload
 
-printf "\033[0;36mFix system source from Berkley\033[0m\n"
-cat /etc/apt/sources.list | sed 's,http://mirrors.ocf.berkeley.edu/raspbian/raspbian/,http://raspbian.raspberrypi.org/raspbian/,g' | tee /etc/apt/sources.list
+if grep -q 'http://mirrors.ocf.berkeley.edu/raspbian/raspbian/' /etc/apt/sources.list; then
+    printf "\033[0;36mFix system source from Berkley\033[0m\n"
 
-printf "\033[0;36mRemove SSL CA certificate hack\033[0m\n"
-rm -f /etc/ssl/certs/cacert.pem
-
-if grep -q 'SSL_CERT_FILE' /etc/profile; then
-    cat /etc/profile | sed 's,SSL_CERT_FILE=/etc/ssl/certs/cacert.pem,,g' | tee /etc/profile
-    cat /etc/profile | sed 's,export SSL_CERT_FILE,,g' | tee /etc/profile
+    cat /etc/apt/sources.list | sed 's,http://mirrors.ocf.berkeley.edu/raspbian/raspbian/,http://raspbian.raspberrypi.org/raspbian/,g' | tee /etc/apt/sources.list
 fi
 
-if grep -q 'SSL_CERT_FILE' /etc/sudoers; then
-    cat /etc/sudoers | sed 's,Defaults    env_keep += "SSL_CERT_FILE",,g' | tee /etc/sudoers
+if [ ! -f /etc/ssl/certs/cacert.pem ]; then
+    printf "\033[0;36mRemove SSL CA certificate hack\033[0m\n"
+
+    rm -f /etc/ssl/certs/cacert.pem
+
+    if grep -q 'SSL_CERT_FILE' /etc/profile; then
+        cat /etc/profile | sed 's,SSL_CERT_FILE=/etc/ssl/certs/cacert.pem,,g' | tee /etc/profile
+        cat /etc/profile | sed 's,export SSL_CERT_FILE,,g' | tee /etc/profile
+    fi
+
+    if grep -q 'SSL_CERT_FILE' /etc/sudoers; then
+        cat /etc/sudoers | sed 's,Defaults    env_keep += "SSL_CERT_FILE",,g' | tee /etc/sudoers
+    fi
 fi
 
 printf "\033[0;36mUpgrade System\033[0m\n"
+
 apt-get update --allow-releaseinfo-change
 dpkg --configure -a
 apt-get update 
@@ -73,6 +88,7 @@ apt-get -y upgrade
 apt-get install -y curl
 
 printf "\033[0;36mInstall HOOBS\033[0m\n"
+
 curl -sk https://dl.hoobs.org/stable | bash -
 apt-get remove -y nodejs yarn hoobsd hoobs-cli hoobs-gui helm hbs-vendor
 apt-get install -y nodejs yarn hoobsd hoobs-cli hoobs-gui helm hbs-vendor
