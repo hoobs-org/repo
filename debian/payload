@@ -38,7 +38,7 @@ systemctl stop nginx.service || true
 systemctl disable nginx.service || true
 apt-get remove -y nginx-full nginx
 
-if [ ! -f /etc/systemd/system/wifi-connect.service ]; then
+if [ -f /etc/systemd/system/wifi-connect.service ]; then
     printf "\033[0;36mReconfigure Wi-Fi Connect\033[0m\n"
 
     echo '[Unit]' | tee /etc/systemd/system/wifi-connect.service
