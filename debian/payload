@@ -64,7 +64,7 @@ if grep -q 'http://mirrors.ocf.berkeley.edu/raspbian/raspbian/' /etc/apt/sources
     cat /etc/apt/sources.list | sed 's,http://mirrors.ocf.berkeley.edu/raspbian/raspbian/,http://raspbian.raspberrypi.org/raspbian/,g' | tee /etc/apt/sources.list
 fi
 
-if [ ! -f /etc/ssl/certs/cacert.pem ]; then
+if [ -f /etc/ssl/certs/cacert.pem ]; then
     printf "\033[0;36mRemove SSL CA certificate hack\033[0m\n"
 
     rm -f /etc/ssl/certs/cacert.pem
