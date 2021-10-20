@@ -55,8 +55,15 @@ cat /etc/apt/sources.list | sed 's,http://mirrors.ocf.berkeley.edu/raspbian/rasp
 
 printf "\033[0;36mRemove SSL CA certificate hack\033[0m\n"
 rm -f /etc/ssl/certs/cacert.pem
-cat /etc/profile | sed 's,SSL_CERT_FILE=/etc/ssl/certs/cacert.pem,,g' | tee /etc/profile
-cat /etc/sudoers | sed 's,Defaults    env_keep += "SSL_CERT_FILE",,g' | tee /etc/sudoers
+
+if grep -q 'SSL_CERT_FILE' /etc/profile; then
+    cat /etc/profile | sed 's,SSL_CERT_FILE=/etc/ssl/certs/cacert.pem,,g' | tee /etc/profile
+    cat /etc/profile | sed 's,export SSL_CERT_FILE,,g' | tee /etc/profile
+fi
+
+if grep -q 'SSL_CERT_FILE' /etc/sudoers; then
+    cat /etc/sudoers | sed 's,Defaults    env_keep += "SSL_CERT_FILE",,g' | tee /etc/sudoers
+fi
 
 printf "\033[0;36mUpgrade System\033[0m\n"
 apt-get update --allow-releaseinfo-change
