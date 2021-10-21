@@ -7,8 +7,8 @@ rm -f /etc/apt/sources.list.d/nodesource.list
 rm -f /etc/apt/sources.list.d/yarn.list
 
 printf "\033[0;36mClean package manager\033[0m\n"
-rm -fR /var/lib/dpkg/updates/*
 dpkg --purge --force-all hoobsd hoobs-cli hoobs-gui
+rm -fR /var/lib/dpkg/updates/*
 rm -fR /var/lib/dpkg/info/hoobsd*
 rm -fR /var/lib/dpkg/info/hoobs-cli*
 rm -fR /var/lib/dpkg/info/hoobs-gui*
