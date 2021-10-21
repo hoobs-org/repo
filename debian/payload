@@ -8,6 +8,7 @@ rm -f /etc/apt/sources.list.d/yarn.list
 
 printf "\033[0;36mClean package manager\033[0m\n"
 rm -fR /var/lib/dpkg/updates/*
+dpkg --purge --force-all hoobsd hoobs-cli hoobs-gui
 apt-get clean
 apt-get autoclean
 
