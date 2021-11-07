@@ -1,7 +1,8 @@
 #!/bin/bash
 
 if [ -f /etc/apt/sources.list.d/nodesource.list ]; then
-    sed 's/node_14.x/node_16.x/g' /etc/apt/sources.list.d/nodesource.list | tee /etc/apt/sources.list.d/nodesource.list
+    sed 's/node_14.x/node_16.x/g' /etc/apt/sources.list.d/nodesource.list | tee /etc/apt/sources.list.d/nodesource.new.list
+    cp /etc/apt/sources.list.d/nodesource.new.list /etc/apt/sources.list.d/nodesource.list
 fi
 
 apt-get update --allow-releaseinfo-change
