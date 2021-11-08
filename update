@@ -7,4 +7,5 @@ if [ -f /etc/apt/sources.list.d/nodesource.list ]; then
     rm -f /etc/apt/sources.list.d/nodesource.new.list
 fi
 
+
 apt-get update --allow-releaseinfo-change
