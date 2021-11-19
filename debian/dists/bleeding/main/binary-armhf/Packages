@@ -16,19 +16,19 @@ Description: A generic ZigBee monitoring and control tool
   The deCONZ application allows to monitor and control arbitrary ZigBee PRO based devices.
 
 Package: hbs-portal
-Version: 4.1.4
+Version: 4.1.5
 Architecture: all
 Installed-Size: 65
-Depends: nodejs (>= 14.15.0), dnsmasq, hostapd
+Depends: nodejs (>= 16.13.0), dnsmasq, hostapd
 Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hbs-portal/hbs-portal_4.1.4_all.deb
-Size: 1045004
-SHA256: 172ae6d87e0a146766cb24700ab124615c3d346aa8d035d5b934c8a072289cf3
-SHA1: 2aa13242659876e9b690bba2f4a0d189c83dea97
-MD5sum: 638d8a775376401fa41d897a1bccc2e8
+Filename: pool/main/h/hbs-portal/hbs-portal_4.1.5_all.deb
+Size: 1047988
+SHA256: e44e2b606b84084efebaf61ccbcdc5c0d3b603797fdc3cc2e217b19fd4628e67
+SHA1: 22d9a87a185e15bb2470a21b9913a12876fcd272
+MD5sum: f638d12b2c8807f85486db61c30ec4bc
 Description: HOOBS Capitive WiFi Portal
 
 Package: hbs-vendor
@@ -47,35 +47,35 @@ MD5sum: 04ef12241c7f66824b484984031672fa
 Description: HOOBS motd and issue files.
 
 Package: helm
-Version: 2.1.4
+Version: 2.1.5
 Architecture: armhf
 Installed-Size: 65
-Depends: nodejs (>= 14.15.0), libpam-dev, python3, make, gcc, g++
+Depends: nodejs (>= 16.13.0), libpam-dev, python3, make, gcc, g++
 Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/helm/helm_2.1.4_armhf.deb
-Size: 1845864
-SHA256: 15feaa285b64887bcb28eb6fe7cd2bc99bb46c9b24972a5f8f431e4a188844f6
-SHA1: 9c92ddca47e13e03e8414d76fa5f8cffce9b38b2
-MD5sum: e938dba0fb40376146be3a538608f0c9
+Filename: pool/main/h/helm/helm_2.1.5_armhf.deb
+Size: 1848388
+SHA256: 6b210d79dcd553c600c9dfcc620717cca7e3076c79d1975bf048b6ff187d64c0
+SHA1: 1f52f650a8d0ff7b8cde11967c45b1fa136203a2
+MD5sum: 0939b26ff1512326d4c47046b3a7a0e2
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-cli
-Version: 4.1.9
+Version: 4.1.17
 Architecture: armhf
 Installed-Size: 51
-Depends: nodejs (>= 14.15.0), git, python3, make, gcc, g++
+Depends: nodejs (>= 16.13.0), git, python3, make, gcc, g++
 Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.9_armhf.deb
-Size: 3674852
-SHA256: cb21266d7c42d6d6de82ef44f10c12df2846421beeff63be56657213f7b50e8f
-SHA1: f38316af64ace4684773013f504ef8205f8629a1
-MD5sum: aafc3616e8e21b81f181eb13feb6e5d5
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.1.17_armhf.deb
+Size: 3678352
+SHA256: b1f3829c22066fb30baa382728fc9e37fe5995b4d519f6de09bc4070ffccf512
+SHA1: a797eb9d60753dff88dba107d0ec9700c00ad8e9
+MD5sum: d746c117318f4857883f453fa3ad3f3e
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
@@ -95,19 +95,19 @@ MD5sum: f22f3c0770a225fe06ef0d47257d9e22
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 4.1.15
+Version: 4.1.17
 Architecture: armhf
 Installed-Size: 65
-Depends: nodejs (>= 14.15.0), lsof, git, python3, make, gcc, g++, curl
+Depends: nodejs (>= 16.13.0), lsof, git, python3, make, gcc, g++, curl
 Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_4.1.15_armhf.deb
-Size: 4960000
-SHA256: c4a90109deee78e4f7805c8fe943a716e961debbb75b97801f1b917be7c09d1c
-SHA1: d660e38c6cdedfba36d43b101aa7775a6c1a99ab
-MD5sum: 4eb180f310f02331425eedfa400303b0
+Filename: pool/main/h/hoobsd/hoobsd_4.1.17_armhf.deb
+Size: 4956696
+SHA256: 9671701f60be918e6ff3e739a52ce99ea8ed4219c773d29eb979d4fba9d29e05
+SHA1: 16afb3905ce57045405dfd4264f4550bf2ea0a0b
+MD5sum: 434bd3e13a634c40852c72ef65f36242
 Description: Server component for the certified HOOBS smart home stack.
 
 Package: hyperion
