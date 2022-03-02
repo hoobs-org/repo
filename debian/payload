@@ -1,80 +1,113 @@
 #!/bin/bash
 
-printf "\033[0;36mRemove 3rd party sources\033[0m\n"
+message() {
+	local tmp=""
 
-rm -f /etc/apt/sources.list.d/hoobs.list
-rm -f /etc/apt/sources.list.d/nodesource.list
-rm -f /etc/apt/sources.list.d/yarn.list
+	[[ -n $2 ]] && tmp="[\e[0;33m $2 \x1B[0m]"
 
-printf "\033[0;36mClean package manager\033[0m\n"
-dpkg --purge --force-all hoobsd hoobs-cli hoobs-gui
-rm -fR /var/lib/dpkg/updates/*
-rm -fR /var/lib/dpkg/info/hoobsd*
-rm -fR /var/lib/dpkg/info/hoobs-cli*
-rm -fR /var/lib/dpkg/info/hoobs-gui*
-apt-get clean
-apt-get autoclean
+	case $3 in
+		wrn)
+			echo -e "[\e[0;35m warn \x1B[0m] $1 $tmp"
+			;;
 
-printf "\033[0;36mRemove manually installed Node binaries\033[0m\n"
+		info)
+            echo -e "[\e[0;32m .... \x1B[0m] $1 $tmp"
+			;;
 
-rm -f /usr/local/bin/node
-rm -f /usr/local/bin/npm
-rm -f /usr/local/bin/npx
+		*)
+			echo -e "[\e[0;32m o.k. \x1B[0m] $1 $tmp"
+			;;
+	esac
+}
 
-printf "\033[0;36mRemove manually installed Node files\033[0m\n"
+clean_sources() {
+    message "removing mal-configured sources" "hoobs, nodesource, yarn" "info"
 
-rm -fR /usr/local/include/node
-rm -fR /usr/local/lib/node_modules
-rm -fR /usr/local/share/doc/node
-rm -f /usr/local/share/man/man1/node.1
-rm -f /usr/local/share/systemtap/tapset/node.stp
+    rm -f /etc/apt/sources.list.d/hoobs.list
+    rm -f /etc/apt/sources.list.d/nodesource.list
+    rm -f /etc/apt/sources.list.d/yarn.list
 
-printf "\033[0;36mRemove services\033[0m\n"
+    message "purging stuck installs" "" "info"
 
-rm -f /etc/systemd/system/homebridge-config-ui-x.service
-rm -f /etc/systemd/system/homebridge.service
-rm -f /etc/systemd/system/hoobs-arch-check.service
+    dpkg --purge --force-all hoobsd hoobs-cli hoobs-gui
 
-printf "\033[0;36mRemove service wants\033[0m\n"
+    message "removing queued pre and post install scripts" "" "info"
 
-rm -f /etc/systemd/system/multi-user.target.wants/homebridge-config-ui-x.service
-rm -f /etc/systemd/system/multi-user.target.wants/homebridge.service
-rm -f /etc/systemd/system/multi-user.target.wants/hoobs-arch-check.service
+    rm -fR /var/lib/dpkg/updates/*
+    rm -fR /var/lib/dpkg/info/hoobsd*
+    rm -fR /var/lib/dpkg/info/hoobs-cli*
+    rm -fR /var/lib/dpkg/info/hoobs-gui*
 
-printf "\033[0;36mRemove NGINX\033[0m\n"
+    message "cleaning package manager" "" "info"
 
-systemctl stop nginx.service || true
-systemctl disable nginx.service || true
-apt-get remove -y nginx-full nginx
+    apt-get clean
+    apt-get autoclean
 
-if [ -f /etc/systemd/system/wifi-connect.service ]; then
-    printf "\033[0;36mReconfigure Wi-Fi Connect\033[0m\n"
+    message "sources cleaned" "" "ok"
+}
 
-    echo '[Unit]' | tee /etc/systemd/system/wifi-connect.service
-    echo 'Description=WiFi Captive Portal' | tee -a /etc/systemd/system/wifi-connect.service
-    echo 'After=NetworkManager.service' | tee -a /etc/systemd/system/wifi-connect.service
-    echo 'Before=hoobsd.service' | tee -a /etc/systemd/system/wifi-connect.service
-    echo '' | tee -a /etc/systemd/system/wifi-connect.service
-    echo '[Service]' | tee -a /etc/systemd/system/wifi-connect.service
-    echo 'Type=oneshot' | tee -a /etc/systemd/system/wifi-connect.service
-    echo 'ExecStart=/usr/local/sbin/wifi-connect-startup' | tee -a /etc/systemd/system/wifi-connect.service
-    echo '' | tee -a /etc/systemd/system/wifi-connect.service
-    echo '[Install]' | tee -a /etc/systemd/system/wifi-connect.service
-    echo 'WantedBy=multi-user.target' | tee -a /etc/systemd/system/wifi-connect.service
-fi
+clean_node_installs() {
+    message "removing installed node binaries" "node, npm, npx" "info"
 
-printf "\033[0;36mReload systemd\033[0m\n"
+    rm -f /usr/local/bin/node
+    rm -f /usr/local/bin/npm
+    rm -f /usr/local/bin/npx
 
-systemctl daemon-reload
+    message "removing node support files" "" "info"
 
-if grep -q 'http://mirrors.ocf.berkeley.edu/raspbian/raspbian/' /etc/apt/sources.list; then
-    printf "\033[0;36mFix system source from Berkley\033[0m\n"
+    rm -fR /usr/local/include/node
+    rm -fR /usr/local/lib/node_modules
+    rm -fR /usr/local/share/doc/node
+    rm -f /usr/local/share/man/man1/node.1
+    rm -f /usr/local/share/systemtap/tapset/node.stp
 
-    cat /etc/apt/sources.list | sed 's,http://mirrors.ocf.berkeley.edu/raspbian/raspbian/,http://raspbian.raspberrypi.org/raspbian/,g' | tee /etc/apt/sources.list
-fi
+    message "node cleaned" "" "ok"
+}
 
-if [ -f /etc/ssl/certs/cacert.pem ]; then
-    printf "\033[0;36mRemove SSL CA certificate hack\033[0m\n"
+clean_old_services() {
+    message "removing services" "hoobs, homebridge, ui-x" "info"
+
+    rm -f /etc/systemd/system/homebridge-config-ui-x.service
+    rm -f /etc/systemd/system/homebridge.service
+    rm -f /etc/systemd/system/hoobs-arch-check.service
+
+    message "disabling services" "" "info"
+
+    rm -f /etc/systemd/system/multi-user.target.wants/homebridge-config-ui-x.service
+    rm -f /etc/systemd/system/multi-user.target.wants/homebridge.service
+    rm -f /etc/systemd/system/multi-user.target.wants/hoobs-arch-check.service
+
+    message "removing conflicting packages" "nginx" "info"
+
+    systemctl stop nginx.service || true
+    systemctl disable nginx.service || true
+    apt-get remove -y nginx-full nginx
+
+    if [ -f /etc/systemd/system/wifi-connect.service ]; then
+        message "repairing wifi captive portal" "wifi-connect" "info"
+
+        echo '[Unit]' | tee /etc/systemd/system/wifi-connect.service
+        echo 'Description=WiFi Captive Portal' | tee -a /etc/systemd/system/wifi-connect.service
+        echo 'After=NetworkManager.service' | tee -a /etc/systemd/system/wifi-connect.service
+        echo 'Before=hoobsd.service' | tee -a /etc/systemd/system/wifi-connect.service
+        echo '' | tee -a /etc/systemd/system/wifi-connect.service
+        echo '[Service]' | tee -a /etc/systemd/system/wifi-connect.service
+        echo 'Type=oneshot' | tee -a /etc/systemd/system/wifi-connect.service
+        echo 'ExecStart=/usr/local/sbin/wifi-connect-startup' | tee -a /etc/systemd/system/wifi-connect.service
+        echo '' | tee -a /etc/systemd/system/wifi-connect.service
+        echo '[Install]' | tee -a /etc/systemd/system/wifi-connect.service
+        echo 'WantedBy=multi-user.target' | tee -a /etc/systemd/system/wifi-connect.service
+    fi
+
+    message "reloading systemd" "" "info"
+
+    systemctl daemon-reload
+
+    message "services cleaned" "" "ok"
+}
+
+repair_ssl_cacerts() {
+    message "removing ssl cacert hacks" "certs, profile, sudo" "info"
 
     rm -f /etc/ssl/certs/cacert.pem
 
@@ -86,26 +119,76 @@ if [ -f /etc/ssl/certs/cacert.pem ]; then
     if grep -q 'SSL_CERT_FILE' /etc/sudoers; then
         cat /etc/sudoers | sed 's,Defaults    env_keep += "SSL_CERT_FILE",,g' | tee /etc/sudoers
     fi
+
+    message "ssl hacks removed" "" "ok"
+}
+
+install_packages() {
+    message "upgrading system" "" "info"
+
+    apt-get update --allow-releaseinfo-change
+    dpkg --configure -a
+    apt-get update 
+    apt-get -y upgrade
+    apt-get install -y curl
+
+    message "repairing packages" "nodejs, yarn, hoobs" "info"
+
+    curl -sk https://dl.hoobs.org/stable | bash -
+    apt-get install -y nodejs yarn
+    apt-get remove -y hoobsd hoobs-cli hoobs-gui hbs-vendor
+    apt-get install -y nodejs yarn hoobsd hoobs-cli hoobs-gui hbs-vendor
+    hbs install -p 80
+
+    message "repairing packages" "helm" "info"
+
+    apt-get install -y helm
+
+    message "packages repaired" "" "ok"
+}
+
+install_watchdog() {
+    message "installing packages" "watchdog" "info"
+
+    apt-get install -y watchdog
+
+    message "configuring watchdog to prevent and recover from crashes" "" "info"
+
+    update-rc.d watchdog defaults
+
+    echo "watchdog-device = /dev/watchdog" | tee /etc/watchdog.conf > /dev/null 2>&1
+    echo "watchdog-timeout = 15" | tee -a /etc/watchdog.conf > /dev/null 2>&1
+    echo "max-load-1 = 24" | tee -a /etc/watchdog.conf > /dev/null 2>&1
+    echo "min-memory = 1" | tee -a /etc/watchdog.conf > /dev/null 2>&1
+    echo "" | tee -a /etc/watchdog.conf > /dev/null 2>&1
+
+    systemctl enable watchdog > /dev/null 2>&1
+
+    message "watchdog configured" "" "ok"
+}
+
+clean_sources
+clean_node_installs
+clean_old_services
+
+if grep -q 'http://mirrors.ocf.berkeley.edu/raspbian/raspbian/' /etc/apt/sources.list; then
+    message "outdated berkley mirror detected" "" "wrn"
+    message "reconfiguring raspbian sources" "raspbian.raspberrypi.org" "info"
+
+    cat /etc/apt/sources.list | sed 's,http://mirrors.ocf.berkeley.edu/raspbian/raspbian/,http://raspbian.raspberrypi.org/raspbian/,g' | tee /etc/apt/sources.list
+
+    message "raspbian sources fixed" "" "ok"
 fi
 
-printf "\033[0;36mUpgrade System\033[0m\n"
+if [ -f /etc/ssl/certs/cacert.pem ]; then
+    message "ssl hacks detected" "" "wrn"
 
-apt-get update --allow-releaseinfo-change
-dpkg --configure -a
-apt-get update 
-apt-get -y upgrade
-apt-get install -y curl
+    repair_ssl_cacerts
+fi
 
-printf "\033[0;36mInstall HOOBS\033[0m\n"
+install_packages
+install_watchdog
 
-curl -sk https://dl.hoobs.org/stable | bash -
-apt-get install -y nodejs yarn
-apt-get remove -y hoobsd hoobs-cli hoobs-gui hbs-vendor
-apt-get install -y nodejs yarn hoobsd hoobs-cli hoobs-gui hbs-vendor
-hbs install -p 80
+message "rebooting" "" "wrn"
 
-printf "\033[0;36mUpgrading HelM\033[0m\n"
-apt-get install -y helm
-
-printf "\033[0;36mRebooting\033[0m\n"
 shutdown -r now
