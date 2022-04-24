@@ -16,7 +16,7 @@ Description: A generic ZigBee monitoring and control tool
   The deCONZ application allows to monitor and control arbitrary ZigBee PRO based devices.
 
 Package: hbs-portal
-Version: 4.1.7
+Version: 4.1.8
 Architecture: all
 Installed-Size: 65
 Depends: nodejs (>= 16.13.0), dnsmasq, hostapd
@@ -24,11 +24,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hbs-portal/hbs-portal_4.1.7_all.deb
-Size: 1075104
-SHA256: ae762c345851d9903b589ead257609cc1152159e0174d1db23e82e5a093dc069
-SHA1: 9f68ff0106bc887d4b83f1ead8e47d61216ebff7
-MD5sum: 3c24eeb3eb38aa9a329c9ebd3c57138c
+Filename: pool/main/h/hbs-portal/hbs-portal_4.1.8_all.deb
+Size: 1075108
+SHA256: a47fd60765c5ac3ca7819f7aa52d1e6b351a33f09f1e9e129a343559993ee580
+SHA1: c62872c01b1312ca5b271ae7196f85374b982f3d
+MD5sum: 8e218c0aa712335a64e8bac4bdb693ad
 Description: HOOBS Capitive WiFi Portal
 
 Package: hbs-vendor
