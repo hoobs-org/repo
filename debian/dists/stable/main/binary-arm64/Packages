@@ -16,7 +16,7 @@ Description: A generic ZigBee monitoring and control tool
   The deCONZ application allows to monitor and control arbitrary ZigBee PRO based devices.
 
 Package: hbs-portal
-Version: 4.1.5
+Version: 4.1.8
 Architecture: all
 Installed-Size: 65
 Depends: nodejs (>= 16.13.0), dnsmasq, hostapd
@@ -24,11 +24,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hbs-portal/hbs-portal_4.1.5_all.deb
-Size: 1047988
-SHA256: e44e2b606b84084efebaf61ccbcdc5c0d3b603797fdc3cc2e217b19fd4628e67
-SHA1: 22d9a87a185e15bb2470a21b9913a12876fcd272
-MD5sum: f638d12b2c8807f85486db61c30ec4bc
+Filename: pool/main/h/hbs-portal/hbs-portal_4.1.8_all.deb
+Size: 1075108
+SHA256: a47fd60765c5ac3ca7819f7aa52d1e6b351a33f09f1e9e129a343559993ee580
+SHA1: c62872c01b1312ca5b271ae7196f85374b982f3d
+MD5sum: 8e218c0aa712335a64e8bac4bdb693ad
 Description: HOOBS Capitive WiFi Portal
 
 Package: hbs-vendor
@@ -47,7 +47,7 @@ MD5sum: 04ef12241c7f66824b484984031672fa
 Description: HOOBS motd and issue files.
 
 Package: helm
-Version: 2.1.5
+Version: 2.1.7
 Architecture: arm64
 Installed-Size: 65
 Depends: nodejs (>= 16.13.0), libpam-dev, python3, make, gcc, g++
@@ -55,15 +55,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/helm/helm_2.1.5_arm64.deb
-Size: 1848624
-SHA256: 64d977388eeb4b2afa3c234a42ea855a7aa1992765ad3cbb4e55e8bf95140b78
-SHA1: 0ab0a3e65e36ee61a86e0dcacbd79d755cea3382
-MD5sum: 06fa0ecb074d9ac16f7598d5e2f3757f
+Filename: pool/main/h/helm/helm_2.1.7_arm64.deb
+Size: 1911896
+SHA256: 36e9a676e460df0b53e30d26eeffa497187c4b4c188c49d86f63fa6cacec207e
+SHA1: c2a9a929662cf016e0fbaff429aeec22c5f268e0
+MD5sum: 6d9d1bc62b51b81c00df164bff8d733a
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-cli
-Version: 4.2.0
+Version: 4.2.2
 Architecture: arm64
 Installed-Size: 51
 Depends: nodejs (>= 16.13.0), git, python3, make, gcc, g++
@@ -71,15 +71,15 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-cli/hoobs-cli_4.2.0_arm64.deb
-Size: 3684660
-SHA256: 663b4bf1320b5e772f448616d1df548aa064cabda859e589c1b601eb43ca6240
-SHA1: 1d6602451befa20c231d6b8546c9b22f3d533797
-MD5sum: a90351c348c90f2857e86b788333fd7d
+Filename: pool/main/h/hoobs-cli/hoobs-cli_4.2.2_arm64.deb
+Size: 3668240
+SHA256: 01b83d25bb2679dc9b895de9b5c533cf433648e3f82814c86d38c665bf1cf167
+SHA1: 683f2df5a8d9b2ce0f05dc4ba8047ba3712adf84
+MD5sum: 5591974e1d752a941496730784b3d8e9
 Description: Command line interface for the certified HOOBS smart home stack.
 
 Package: hoobs-gui
-Version: 4.2.1
+Version: 4.2.2
 Architecture: all
 Installed-Size: 51
 Depends: hoobsd (>= 4.0.0), helm (>= 1.2.2)
@@ -87,27 +87,27 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobs-gui/hoobs-gui_4.2.1_all.deb
-Size: 13973628
-SHA256: 95bf1a5fb676936533b4ffc649cb41fee4f9835d635e4a38b7080126ed0f43f2
-SHA1: 566b6ae3a8823123261b6bccb480907991525e02
-MD5sum: 22b05beddf33f2b7b4e99cd6142c9ef3
+Filename: pool/main/h/hoobs-gui/hoobs-gui_4.2.2_all.deb
+Size: 13974108
+SHA256: 80a0d3d81154167f4edb1d460ff11876e449695e99fdc9ab2ab7bdf634e74bc2
+SHA1: 76e4bd628318939e4e963c5f9462f5a33103bf90
+MD5sum: 92b54cd78ed93038ab52da9aa85e8052
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 4.2.1
+Version: 4.2.2
 Architecture: arm64
 Installed-Size: 65
-Depends: nodejs (>= 16.13.0), lsof, git, python3, make, gcc, g++, curl
+Depends: nodejs (>= 16.13.0), lsof, git, python3, make, gcc, g++, curl, ntp
 Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_4.2.1_arm64.deb
-Size: 5156372
-SHA256: e3249011e3ec0e0e30f6887a222e36d5cdcb537431d72a25de908f466c6a1733
-SHA1: 8f2ba519ead2e0a1eae4f1deabb5a179d986de5e
-MD5sum: eb6097e9f12c5042b21da3da834611be
+Filename: pool/main/h/hoobsd/hoobsd_4.2.2_arm64.deb
+Size: 5190520
+SHA256: 9d092f33b453633e5b6f53b80c5de66594698499d380e3de9d6db7f90198ab79
+SHA1: 9256a00aeb0128b13071e851f9ea08770a4596d4
+MD5sum: b0c3be31d886c482af90b221153becc9
 Description: Server component for the certified HOOBS smart home stack.
 
 Package: hyperion
