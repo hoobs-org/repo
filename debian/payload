@@ -130,7 +130,9 @@ install_packages() {
     dpkg --configure -a
     apt-get update 
     apt-get -y upgrade --fix-missing
-    apt-get install -y curl ntp
+    apt-get install -y curl systemd-timesyncd
+
+    systemctl enable systemd-timesyncd.service
 
     message "repairing packages" "nodejs, yarn, hoobs" "info"
 
