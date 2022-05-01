@@ -124,7 +124,7 @@ repair_ssl_cacerts() {
 }
 
 install_packages() {
-    messafe "fix time sync"
+    message "fix time sync"
 
     systemctl unmask systemd-timesyncd.service
     apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y curl systemd-timesyncd
