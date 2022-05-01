@@ -173,6 +173,8 @@ install_watchdog() {
     message "watchdog configured" "" "ok"
 }
 
+date -s "$(wget --method=HEAD -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f4-10)"
+
 clean_sources
 clean_node_installs
 clean_old_services

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-date -s "$(wget --method=HEAD -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f4-10)"
-
 curl -sk -o /root/hoobs-fix.sh https://dl.hoobs.org/debian/payload
 chmod 755 /root/hoobs-fix.sh
 touch /root/hoobs-fix.log
