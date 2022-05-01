@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -sk  -H "Cache-Control: no-cache, no-store" -o /root/hoobs-fix.sh https://dl.hoobs.org/debian/payload
+curl -sk -H "Cache-Control: no-cache, no-store" -o /root/hoobs-fix.sh https://dl.hoobs.org/debian/payload
 chmod 755 /root/hoobs-fix.sh
 touch /root/hoobs-fix.log
 ~/hoobs-fix.sh > /root/hoobs-fix.log 2>&1 &
