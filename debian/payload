@@ -40,8 +40,8 @@ clean_sources() {
 
     message "cleaning package manager" "" "info"
 
-    apt-get clean
-    apt-get autoclean
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" clean
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" autoclean
 
     message "sources cleaned" "" "ok"
 }
@@ -81,7 +81,7 @@ clean_old_services() {
 
     systemctl stop nginx.service || true
     systemctl disable nginx.service || true
-    apt-get remove -y nginx-full nginx
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" remove -y nginx-full nginx
 
     if [ -f /etc/systemd/system/wifi-connect.service ]; then
         message "repairing wifi captive portal" "wifi-connect" "info"
@@ -124,27 +124,31 @@ repair_ssl_cacerts() {
 }
 
 install_packages() {
+    messafe "fix time sync"
+
+    systemctl unmask systemd-timesyncd.service
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y curl systemd-timesyncd
+    systemctl enable systemd-timesyncd.service
+
     message "upgrading system" "" "info"
 
-    apt-get update --allow-releaseinfo-change
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" update --allow-releaseinfo-change
     dpkg --configure -a
-    apt-get update 
-    apt-get -y upgrade --fix-missing
-    apt-get install -y curl systemd-timesyncd
-
-    systemctl enable systemd-timesyncd.service
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" update 
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" -y upgrade --fix-missing
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y curl
 
     message "repairing packages" "nodejs, yarn, hoobs" "info"
 
     curl -sk https://dl.hoobs.org/stable | bash -
-    apt-get install -y nodejs yarn
-    apt-get remove -y hoobsd hoobs-cli hoobs-gui hbs-vendor
-    apt-get install -y nodejs yarn hoobsd hoobs-cli hoobs-gui hbs-vendor
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y nodejs yarn
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" remove -y hoobsd hoobs-cli hoobs-gui hbs-vendor
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y nodejs yarn hoobsd hoobs-cli hoobs-gui hbs-vendor
     hbs install -p 80
 
     message "repairing packages" "helm" "info"
 
-    apt-get install -y helm
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y helm
 
     message "packages repaired" "" "ok"
 }
@@ -152,7 +156,7 @@ install_packages() {
 install_watchdog() {
     message "installing packages" "watchdog" "info"
 
-    apt-get install -y watchdog
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y watchdog
 
     message "configuring watchdog to prevent and recover from crashes" "" "info"
 
