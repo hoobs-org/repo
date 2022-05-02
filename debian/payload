@@ -142,8 +142,7 @@ install_packages() {
 
     curl -sk https://dl.hoobs.org/stable | bash -
     apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y nodejs yarn
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" remove -y hoobsd hoobs-cli hoobs-gui hbs-vendor
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y nodejs yarn hoobsd hoobs-cli hoobs-gui hbs-vendor
+    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y --reinstall nodejs yarn hoobsd hoobs-cli hoobs-gui hbs-vendor
     hbs install -p 80
 
     message "repairing packages" "helm" "info"
@@ -173,6 +172,7 @@ install_watchdog() {
     message "watchdog configured" "" "ok"
 }
 
+killall dnsmasq
 tzupdate
 date -s "$(wget --method=HEAD -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f4-10)"
 
