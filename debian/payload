@@ -142,6 +142,8 @@ install_packages() {
 
     curl -sk https://dl.hoobs.org/stable | bash -
     apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y nodejs yarn
+    yarn cache clean || true
+    (cd /usr/lib/hoobsd && yarn install || true)
     apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y --reinstall nodejs yarn hoobsd hoobs-cli hoobs-gui hbs-vendor
     hbs install -p 80
 
