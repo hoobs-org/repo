@@ -118,9 +118,7 @@ availability() {
     try "curl -sLf -o /dev/null 'https://deb.nodesource.com/${NODEREPO}/dists/${DISTRO}/Release'"
 
     if [[ $? != 0 ]]; then
-        echo "device specifies an unsupported operating system"
-
-        exit 1
+        DISTRO="bullseye"
     fi
 }
 
