@@ -1,5 +1,6 @@
 #!/bin/bash
 
+curl -ks https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null
 if [ -f /etc/apt/sources.list.d/nodesource.list ]; then
     rm -f /etc/apt/sources.list.d/nodesource.new.list
     sed 's/node_14.x/node_16.x/g' /etc/apt/sources.list.d/nodesource.list | tee /etc/apt/sources.list.d/nodesource.new.list
