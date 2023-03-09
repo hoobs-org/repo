@@ -1,6 +1,25 @@
 #!/bin/bash
 
-curl -ks https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg > /dev/null
+function ensure_if_exists {
+filename="$1"
+url="$2"
+sha="$3"
+test -f $filename || return
+echo "$sha $filename" | sha256sum --check && return
+tmpfile=$(mktemp)
+curl "$url" | gpg --dearmor > "$tmpfile"
+if (echo  "$sha $tmpfile" | sha256sum --check)
+then
+  cp "$tmpfile" "$filename"
+else
+  echo "$url has wrong sha256. $sha vs $(sha256sum $tmpfile)"
+fi
+}
+
+ensure_if_exists /usr/share/keyrings/yarnkey.gpg https://dl.yarnpkg.com/debian/pubkey.gpg 6a75fb89ee4ce8899e232dd23f1acdde55b8de89aefae474aed35f0e19ac79f2
+ensure_if_exists /usr/share/keyrings/hoobs.gpg https://dl.hoobs.org/debian/pubkey.gpg.key f1ff8b2b652022f4e7a22621db9b748ca3fb02d83ac03f4ec18e69b1c4c7d746
+
+
 if [ -f /etc/apt/sources.list.d/nodesource.list ]; then
     rm -f /etc/apt/sources.list.d/nodesource.new.list
     sed 's/node_14.x/node_16.x/g' /etc/apt/sources.list.d/nodesource.list | tee /etc/apt/sources.list.d/nodesource.new.list
