@@ -5,12 +5,14 @@ filename="$1"
 url="$2"
 sha="$3"
 test -f $filename || return
+chmod 644 "$filename"
 echo "$sha $filename" | sha256sum --check && return
 tmpfile=$(mktemp)
-curl "$url" | gpg --dearmor > "$tmpfile"
+curl -ks "$url" | gpg --dearmor > "$tmpfile"
 if (echo  "$sha $tmpfile" | sha256sum --check)
 then
   mv "$tmpfile" "$filename"
+  chmod 644 "$filename"
 else
   echo "$url has wrong sha256. $sha vs $(sha256sum $tmpfile)"
 fi
