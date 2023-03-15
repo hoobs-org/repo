@@ -47,19 +47,19 @@ MD5sum: 04ef12241c7f66824b484984031672fa
 Description: HOOBS motd and issue files.
 
 Package: helm
-Version: 2.1.5
+Version: 2.1.9
 Architecture: arm64
 Installed-Size: 65
-Depends: nodejs (>= 16.13.0), libpam-dev, python3, make, gcc, g++
+Depends: nodejs (>= 18.15.0), libpam-dev, python3, make, gcc, g++
 Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/helm/helm_2.1.5_arm64.deb
-Size: 1848624
-SHA256: 64d977388eeb4b2afa3c234a42ea855a7aa1992765ad3cbb4e55e8bf95140b78
-SHA1: 0ab0a3e65e36ee61a86e0dcacbd79d755cea3382
-MD5sum: 06fa0ecb074d9ac16f7598d5e2f3757f
+Filename: pool/main/h/helm/helm_2.1.9_arm64.deb
+Size: 1948260
+SHA256: bd0b15035c8e3aaf0b09a8b544c1fe68632f94679813bf548d1e7fb80a05c61f
+SHA1: 7cde1226ca6ef48a724ec668fda8744fa74df052
+MD5sum: cbe48cd8d42ec983290afd49d5eec921
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-cli
@@ -95,19 +95,19 @@ MD5sum: 22b05beddf33f2b7b4e99cd6142c9ef3
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 4.3.0
+Version: 5.0.0-alpha.0
 Architecture: arm64
 Installed-Size: 65
-Depends: nodejs (>= 16.13.0), lsof, git, python3, make, gcc, g++, curl
+Depends: nodejs (>= 18.15.0), lsof, git, python3, make, gcc, g++, curl
 Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_4.3.0_arm64.deb
-Size: 4778684
-SHA256: 72366b9dacf5d2fde81c61239ac0df626d4baaee62459cd92c20867143de0ac7
-SHA1: df27e5fce6c94350214700b0f1de97790c3f6624
-MD5sum: 0875bd7df60f4492e3a64e1b8dc0e9fe
+Filename: pool/main/h/hoobsd/hoobsd_5.0.0-alpha.0_arm64.deb
+Size: 83033868
+SHA256: 028a485771d237f6e3067305a88781e02fc55c4829a5fd50e85b4fd5fd76f1a9
+SHA1: f1aeb84dcffecb708e03276f57b242703d8b39ac
+MD5sum: 936044b489a0e1787f9e902ee187715c
 Description: Server component for the certified HOOBS smart home stack.
 
 Package: hyperion
