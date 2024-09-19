@@ -1,37 +1,37 @@
 Origin: HOOBS
 Label: HOOBS
 Codename: bleeding
-Date: Mon, 16 Sep 2024 04:19:05 UTC
+Date: Fri, 02 Feb 2024 22:42:34 UTC
 Architectures: amd64 arm64 armhf
 Components: main
 Description: HOOBS Repository
 MD5Sum:
- e383284731dccc19125b48767634406d 4403 main/binary-amd64/Packages
- 53f6dc57f8a012c3bfba3da5b6eaf6ca 1769 main/binary-amd64/Packages.gz
+ b266b1ca5c3722711f6917894b81d5c4 4403 main/binary-amd64/Packages
+ a34614e59b04c273b03a9d6d933e6569 1764 main/binary-amd64/Packages.gz
  d621e29a2db2e97d0e7416bdec4588ea 93 main/binary-amd64/Release
- 24c9a86a6460c7a5c51369d908bba7a3 4403 main/binary-arm64/Packages
- e2f83239545af515b62ced3e5ad5897d 1772 main/binary-arm64/Packages.gz
+ c114a8ee3659f20aa240e8a5c90f605b 4403 main/binary-arm64/Packages
+ e919f458ec3a34a5e4bc7410906fc4fb 1769 main/binary-arm64/Packages.gz
  49fb8602704a3e75c7d97b944e77bf69 93 main/binary-arm64/Release
- 5056b490b7405738c9c034c1ba2f664f 4822 main/binary-armhf/Packages
- 3623380c5a34546c9585ec155a797512 1941 main/binary-armhf/Packages.gz
+ 9ffd00de7d264fca329b5731941791cd 4822 main/binary-armhf/Packages
+ 02ba71dd5020964eab85cd71ec9555d3 1938 main/binary-armhf/Packages.gz
  66cdeb55714e25f58866330bacda291c 93 main/binary-armhf/Release
 SHA1:
- d2882d7fd6e6ae4f6fb009be24b54105c698f334 4403 main/binary-amd64/Packages
- d415428fd53629a852276c9643e841a6eddfd2dc 1769 main/binary-amd64/Packages.gz
+ 56c90b1ba7a9d53555190b8955eb6dd3b186de39 4403 main/binary-amd64/Packages
+ e57d330d2d283ca8f87d23dbf729cdb0c4eaab3e 1764 main/binary-amd64/Packages.gz
  fa16c28d79be55b4b6b4c05ea8a1730960ce47b6 93 main/binary-amd64/Release
- f68c258b173d70260faa808534077a46ff12b03e 4403 main/binary-arm64/Packages
- 12561b9df4882f78729348ae6a462a524813fe10 1772 main/binary-arm64/Packages.gz
+ 6062a1475c164527a650d6c6d1321f86266aae2c 4403 main/binary-arm64/Packages
+ 20e503a21f50bb181ba3b8d67c7a19c0e4d45e86 1769 main/binary-arm64/Packages.gz
  8b09c5e9006d7cdf3fbed8b1f46dbc35f457eddb 93 main/binary-arm64/Release
- bcd5da03daf34dbf20bcf02c7b3bb4502f4826c1 4822 main/binary-armhf/Packages
- c2b4b5c6bbac4ecc9ffa155ec44ad1ef4140fba9 1941 main/binary-armhf/Packages.gz
+ 6867927538c829cd21027d358b682a56a75d96bb 4822 main/binary-armhf/Packages
+ d07e3512aba0205f59ff6f90c3155cdbe1db917a 1938 main/binary-armhf/Packages.gz
  1513b3c5f33d3ea50046f8310fc6c3f055c76f86 93 main/binary-armhf/Release
 SHA256:
- 60327884469b8e029b28ee11c64bd5f0001191730fcc207ef14ec300c732c2a1 4403 main/binary-amd64/Packages
- 23d56741fbefc6b29a7df1bfc6c5755f84e4ec40e364111dff9b17cf1afffee9 1769 main/binary-amd64/Packages.gz
+ 29e9844aa0f0e64d438ed8a0a3114f52b139e28451441d2d0724b510dea348e6 4403 main/binary-amd64/Packages
+ d27261e9544583ca9ab566af7292361be75e344d1606b6dc84e5931065151034 1764 main/binary-amd64/Packages.gz
  9a2e416e88ff364fa95a8a61569253b69afda123cbe7734dafd4917074ccc254 93 main/binary-amd64/Release
- f79f558fb3960b59deaf2635770572e9b8ee7a7ef0d8eec1a91fa8e69ed1c329 4403 main/binary-arm64/Packages
- a2eb4698783fc5d7a8f5058b068a04b328d788d8bdfe192eac40064afca3b9c4 1772 main/binary-arm64/Packages.gz
+ 2ac7a06f17800d70254c5b91e41b539902b49eb4d1a81c65b8d889aa8b8abbea 4403 main/binary-arm64/Packages
+ b0e58576e84676112e48405fbfdcc3e2f5c1c5a46a26335e07fe57c90151bda0 1769 main/binary-arm64/Packages.gz
  5eaf2110af7382041050b29029ed6b9a36801d33dbaea74fbeae07baabd79eda 93 main/binary-arm64/Release
- 79c59af5ae9b4a2579063f961999d463cbdbca62c4a8d48cf7d0f2ac7515e4b3 4822 main/binary-armhf/Packages
- 69c94b72eb616f244510b21890b3704869d8eeb2b1545725e9cd6bd4cc4cb99b 1941 main/binary-armhf/Packages.gz
+ 0ae933e8773def02694a361177b7cb503992d636c22a5d96062e8f7df842d4c1 4822 main/binary-armhf/Packages
+ effece4b5ed1d09c2d24d7473ece50a886e836876c17fcc454e752075abf6a86 1938 main/binary-armhf/Packages.gz
  33dc2b2d77a26b6cee1ba0ad90ea4e9b7eabd99f4e93af79c4417f4734bae989 93 main/binary-armhf/Release
