@@ -95,7 +95,7 @@ MD5sum: 22b05beddf33f2b7b4e99cd6142c9ef3
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 5.0.18
+Version: 5.0.19
 Architecture: armhf
 Installed-Size: 65
 Depends: nodejs (>= 18.15.0), lsof, git, python3, make, gcc, g++, curl
@@ -103,11 +103,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_5.0.18_armhf.deb
-Size: 42391540
-SHA256: 696df005a7954e6b9cddcd123a334698a8bfbe8b8c2243984d4e5425cbcb6d70
-SHA1: 89ce62de66f94cef02741fc103495256e11b580b
-MD5sum: 1f69596aff3039b050e9ab25ae4d1600
+Filename: pool/main/h/hoobsd/hoobsd_5.0.19_armhf.deb
+Size: 42391676
+SHA256: b27a28d86eb07975afa787aed32f05eaba0ce25e0cd5953e2783991e0de0e88c
+SHA1: 1b4be689b838b8bdd97127a7a9d7372309a312b4
+MD5sum: e76f0096208b631d7e8d1e597949c208
 Description: Server component for the certified HOOBS smart home stack.
 
 Package: hyperion
