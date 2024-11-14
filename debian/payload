@@ -40,8 +40,8 @@ clean_sources() {
 
     message "cleaning package manager" "" "info"
 
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" clean
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" autoclean
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" clean
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" autoclean
 
     message "sources cleaned" "" "ok"
 }
@@ -81,7 +81,7 @@ clean_old_services() {
 
     systemctl stop nginx.service || true
     systemctl disable nginx.service || true
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" remove -y nginx-full nginx
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" remove -y nginx-full nginx
 
     if [ -f /etc/systemd/system/wifi-connect.service ]; then
         message "repairing wifi captive portal" "wifi-connect" "info"
@@ -127,30 +127,30 @@ install_packages() {
     message "fix time sync"
 
     systemctl unmask systemd-timesyncd.service
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y curl systemd-timesyncd
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" install -y curl systemd-timesyncd
     systemctl enable systemd-timesyncd.service
 
     message "upgrading system" "" "info"
 
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" update --allow-releaseinfo-change
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" update --allow-releaseinfo-change
     dpkg --configure -a
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" update 
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" -y upgrade --fix-missing
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y curl
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" update 
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" -y upgrade --fix-missing
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" install -y curl
 
     message "repairing packages" "nodejs, yarn, hoobs" "info"
 
     curl -sk https://dl.hoobs.org/stable | bash -
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y nodejs yarn
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y --reinstall nodejs yarn hoobsd hoobs-cli hoobs-gui hbs-vendor
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" install -y nodejs yarn
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" install -y --reinstall nodejs yarn hoobsd hoobs-cli hoobs-gui hbs-vendor
     yarn cache clean || true
     (cd /usr/lib/hoobsd && yarn install || true)
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y --reinstall hoobsd hoobs-cli
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" install -y --reinstall hoobsd hoobs-cli
     hbs install -p 80
 
     message "repairing packages" "helm" "info"
 
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y helm
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" install -y helm
 
     message "packages repaired" "" "ok"
 }
@@ -158,7 +158,7 @@ install_packages() {
 install_watchdog() {
     message "installing packages" "watchdog" "info"
 
-    apt-get -o "Acquire::https::Verify-Host=false Acquire::https::Verify-Peer=false" install -y watchdog
+    apt-get -o DPkg::Options::="--force-confnew" -o "Acquire::https::Verify-Host=false" -o "Acquire::https::Verify-Peer=false" install -y watchdog
 
     message "configuring watchdog to prevent and recover from crashes" "" "info"
 
