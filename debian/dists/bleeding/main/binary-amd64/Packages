@@ -47,7 +47,7 @@ MD5sum: 04ef12241c7f66824b484984031672fa
 Description: HOOBS motd and issue files.
 
 Package: helm
-Version: 3.0.0
+Version: 3.0.1
 Architecture: amd64
 Installed-Size: 65
 Depends: nodejs (>= 16.13.0), libpam-dev, python3, make, gcc, g++
@@ -55,11 +55,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/helm/helm_3.0.0_amd64.deb
-Size: 1952612
-SHA256: 8b71ad3065a7e80f0b84ad1d42e97e91aa97dfd5c8ff98b8076b09f919325404
-SHA1: e1e8f2dd8090c403ee976bf450dccfc068389d78
-MD5sum: 226b529aeabe4ad80fd5a3bcb22c48cd
+Filename: pool/main/h/helm/helm_3.0.1_amd64.deb
+Size: 1767504
+SHA256: 319f90b0e95a98fef36eb7a7284fc4febceaeb38bd2a1764c74df9fc218ad2b5
+SHA1: 26c244f8c4338232d2111ed27fa82cd5070e7cb6
+MD5sum: 71bab5ad44a459d655946743aa1df389
 Description: Recovery and remote console for Debian based systems.
 
 Package: hoobs-cli
