@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 DISTRO="bullseye"
 RELEASE="stable"
-NODEREPO="node_18.x"
+NODEREPO="node_20.x"
 
 try() {
     bash -c "$1"
