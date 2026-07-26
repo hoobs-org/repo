@@ -27,6 +27,14 @@ rm -f "$tmpfile"
 ensure_if_exists /usr/share/keyrings/yarnkey.gpg https://dl.yarnpkg.com/debian/pubkey.gpg 6a75fb89ee4ce8899e232dd23f1acdde55b8de89aefae474aed35f0e19ac79f2
 ensure_if_exists /usr/share/keyrings/hoobs.gpg https://dl.hoobs.org/debian/pubkey.gpg.key f1ff8b2b652022f4e7a22621db9b748ca3fb02d83ac03f4ec18e69b1c4c7d746
 
+# Persistently switch this box to a non-interactive debconf frontend. A HOOBS box is headless, so
+# any package that asks a debconf question would hang a tty-less update. Writing this to the
+# debconf database means EVERY future apt run — including one driven by OLDER hoobsd that never
+# exported DEBIAN_FRONTEND — uses defaults and never prompts. This is what protects already-deployed
+# boxes before they upgrade. Validated to stop the iperf3 hang on Debian 12 (bookworm).
+echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections 2>/dev/null || true
+dpkg-reconfigure -f noninteractive debconf > /dev/null 2>&1 || true
+
 
 if [ -f /etc/apt/sources.list.d/nodesource.list ]; then
     if grep -qE '(^| )bleeding( |$)' /etc/apt/sources.list.d/hoobs.list 2>/dev/null; then
