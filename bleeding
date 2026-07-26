@@ -159,7 +159,6 @@ setup() {
     execute "curl -ks https://dl.hoobs.org/debian/pubkey.gpg.key | gpg --dearmor | tee /usr/share/keyrings/hoobs.gpg > /dev/null"
 
     execute "echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODEREPO} nodistro main' | tee /etc/apt/sources.list.d/nodesource.list"
-    execute "echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/${NODEREPO} nodistro main' | tee -a /etc/apt/sources.list.d/nodesource.list"
     execute "echo 'deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian/ stable main' | tee /etc/apt/sources.list.d/yarn.list"
     execute "echo 'deb [signed-by=/usr/share/keyrings/hoobs.gpg] https://dl.hoobs.org/debian/ ${RELEASE} main' | tee /etc/apt/sources.list.d/hoobs.list"
 
