@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Run all package configuration non-interactively. hoobsd invokes this script with no controlling
+# tty, so any debconf prompt (e.g. iperf3 "start Iperf3 as a daemon?") would block the update
+# forever. Non-interactive mode auto-answers with defaults so the update can never hang.
+export DEBIAN_FRONTEND=noninteractive
+
 function ensure_if_exists {
 filename="$1"
 url="$2"
