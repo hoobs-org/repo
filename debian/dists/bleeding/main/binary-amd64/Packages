@@ -95,7 +95,7 @@ MD5sum: 22b05beddf33f2b7b4e99cd6142c9ef3
 Description: Interface component for the certified HOOBS stack.
 
 Package: hoobsd
-Version: 5.1.13
+Version: 5.1.14
 Architecture: amd64
 Installed-Size: 65
 Depends: nodejs (>= 22.0.0), lsof, git, python3, make, gcc, g++, curl
@@ -103,11 +103,11 @@ Maintainer: HOOBS Maintainers <info@hoobs.com>
 Homepage: https://hoobs.com
 Priority: optional
 Section: base
-Filename: pool/main/h/hoobsd/hoobsd_5.1.13_amd64.deb
-Size: 41457948
-SHA256: 2c8950683e039ad1a9e6d7d307ac1884800a5fad56157bea34aa2434ac26aa80
-SHA1: 044ed6bba3cb8a4b2b0220fd3dba491bad3daad9
-MD5sum: 8ae01a816774c3107cb3660299c0d364
+Filename: pool/main/h/hoobsd/hoobsd_5.1.14_amd64.deb
+Size: 41460164
+SHA256: 90b539fd3873d7bd103905f13f55b019e249f9a7713f10a5c6f40b170eb45b91
+SHA1: a72c2b31d7667f47dbd2a605cfc8a53d53844244
+MD5sum: 7814785db8411e4232176b87d6453fc2
 Description: Server component for the certified HOOBS smart home stack.
 
 Package: hyperion
