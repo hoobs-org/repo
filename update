@@ -5,6 +5,18 @@
 # forever. Non-interactive mode auto-answers with defaults so the update can never hang.
 export DEBIAN_FRONTEND=noninteractive
 
+# --- Kernel/BSP freeze (BLEEDING channel only, for now) ----------------------------------------
+# A blanket `apt-get upgrade` would swap the board's tested kernel for whatever Armbian ships in its
+# rolling "current" branch (e.g. 6.12 -> 6.18), dropping the board device-tree / WiFi / ethernet
+# customisations that only exist on the pinned 6.12/6.13 kernel (the M4 Berry lost WiFi + gigabit
+# exactly this way). Freeze the kernel + board-support packages so an upgrade can never move them.
+# Gated to the BLEEDING channel until validated in the field, so stable/edge boxes are unaffected.
+if grep -qE '(^| )bleeding( |$)' /etc/apt/sources.list.d/hoobs.list 2>/dev/null; then
+    for pkg in $(dpkg-query -W -f='${Package}\n' 2>/dev/null | grep -E '^(linux-image|linux-dtb|linux-headers|linux-u-boot|armbian-bsp)'); do
+        apt-mark hold "$pkg" >/dev/null 2>&1 || true
+    done
+fi
+
 function ensure_if_exists {
 filename="$1"
 url="$2"
