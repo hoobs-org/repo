@@ -39,11 +39,22 @@ rm -f "$tmpfile"
 ensure_if_exists /usr/share/keyrings/yarnkey.gpg https://dl.yarnpkg.com/debian/pubkey.gpg 6a75fb89ee4ce8899e232dd23f1acdde55b8de89aefae474aed35f0e19ac79f2
 ensure_if_exists /usr/share/keyrings/hoobs.gpg https://dl.hoobs.org/debian/pubkey.gpg.key f1ff8b2b652022f4e7a22621db9b748ca3fb02d83ac03f4ec18e69b1c4c7d746
 
-# ensure_if_exists only refreshes an EXISTING keyring; create the NodeSource + Yarn keyrings ONLY if
-# they are MISSING (the NO_PUBKEY case). Writing to a non-existent path never prompts, so this stays
-# fully non-interactive — never overwrite an existing key (gpg --dearmor -o would prompt and hang).
-[ -f /usr/share/keyrings/nodesource.gpg ] || curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key 2>/dev/null | gpg --dearmor -o /usr/share/keyrings/nodesource.gpg 2>/dev/null || true
-[ -f /usr/share/keyrings/yarnkey.gpg ] || curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg 2>/dev/null | gpg --dearmor -o /usr/share/keyrings/yarnkey.gpg 2>/dev/null || true
+# ensure_if_exists only REFRESHES an existing keyring and can't fix a stale one. Handle NodeSource +
+# Yarn here, fully non-interactively (temp-file + mv / cp — `gpg --dearmor -o` on an existing file
+# would PROMPT and hang a tty-less update).
+#
+# NodeSource: refresh the key outright. The unified 'nodistro' repo is signed with a newer key than
+# an old per-codename ('bookworm') setup shipped, so an existing keyring can still NO_PUBKEY.
+_nskey=$(mktemp)
+if curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key 2>/dev/null | gpg --dearmor > "$_nskey" 2>/dev/null && [ -s "$_nskey" ]; then
+    mv -f "$_nskey" /usr/share/keyrings/nodesource.gpg && chmod 644 /usr/share/keyrings/nodesource.gpg
+fi
+rm -f "$_nskey"
+
+# Yarn: create the keyring if missing, and — since the image's yarn source line is legacy (no
+# signed-by=) — also expose the verified key in the legacy trusted dir so apt can verify it there.
+[ -f /usr/share/keyrings/yarnkey.gpg ] || (curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg 2>/dev/null | gpg --dearmor -o /usr/share/keyrings/yarnkey.gpg 2>/dev/null) || true
+[ -f /usr/share/keyrings/yarnkey.gpg ] && cp -f /usr/share/keyrings/yarnkey.gpg /etc/apt/trusted.gpg.d/yarnkey.gpg 2>/dev/null || true
 
 # Persistently switch this box to a non-interactive debconf frontend. A HOOBS box is headless, so
 # any package that asks a debconf question would hang a tty-less update. Writing this to the
