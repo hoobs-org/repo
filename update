@@ -39,6 +39,11 @@ rm -f "$tmpfile"
 ensure_if_exists /usr/share/keyrings/yarnkey.gpg https://dl.yarnpkg.com/debian/pubkey.gpg 6a75fb89ee4ce8899e232dd23f1acdde55b8de89aefae474aed35f0e19ac79f2
 ensure_if_exists /usr/share/keyrings/hoobs.gpg https://dl.hoobs.org/debian/pubkey.gpg.key f1ff8b2b652022f4e7a22621db9b748ca3fb02d83ac03f4ec18e69b1c4c7d746
 
+# ensure_if_exists only refreshes an EXISTING keyring; fetch the NodeSource + Yarn signing keys
+# unconditionally so a box that is missing them (the NO_PUBKEY / dead-repo case) still gets them.
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key 2>/dev/null | gpg --dearmor -o /usr/share/keyrings/nodesource.gpg 2>/dev/null || true
+curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg 2>/dev/null | gpg --dearmor -o /usr/share/keyrings/yarnkey.gpg 2>/dev/null || true
+
 # Persistently switch this box to a non-interactive debconf frontend. A HOOBS box is headless, so
 # any package that asks a debconf question would hang a tty-less update. Writing this to the
 # debconf database means EVERY future apt run — including one driven by OLDER hoobsd that never
@@ -55,11 +60,10 @@ if [ -f /etc/apt/sources.list.d/nodesource.list ]; then
         # retired and now 404, so we write the correct line deterministically.
         echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main' > /etc/apt/sources.list.d/nodesource.list
     else
-        # All other channels: unchanged legacy behavior (floor at node 20, codename left as-is).
-        rm -f /etc/apt/sources.list.d/nodesource.new.list
-        sed 's/node_14.x/node_20.x/g; s/node_16.x/node_20.x/g; s/node_18.x/node_20.x/g' /etc/apt/sources.list.d/nodesource.list | tee /etc/apt/sources.list.d/nodesource.new.list
-        cp /etc/apt/sources.list.d/nodesource.new.list /etc/apt/sources.list.d/nodesource.list
-        rm -f /etc/apt/sources.list.d/nodesource.new.list
+        # All other channels: floor at node 20. NodeSource retired the per-Debian-codename suites
+        # (bullseye AND bookworm now 404), so write the unified 'nodistro' suite deterministically
+        # instead of sed-preserving the now-dead codename.
+        echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main' > /etc/apt/sources.list.d/nodesource.list
     fi
 fi
 
