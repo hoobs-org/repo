@@ -78,5 +78,17 @@ if [ -f /etc/apt/sources.list.d/nodesource.list ]; then
     fi
 fi
 
+# Disable the retired bullseye-backports suite. Debian removed bullseye-backports; its Release file
+# now 404s, which makes `apt-get update` exit non-zero on bullseye boxes (HSLF-1/HSLF-2) — breaking
+# every hoobsd path that shells `apt-get update` (hbs system reset, System.info, the update check).
+# Nothing on the fleet is installed from backports (verified: no ~bpo11 packages), so commenting the
+# source out is lossless. Self-guarding: only lines that contain 'bullseye-backports' are touched,
+# so bookworm boxes (HSLF-3 — no such line) are completely unaffected, and lines already commented
+# (starting with #) don't match, so re-running is idempotent.
+for _src in /etc/apt/sources.list /etc/apt/sources.list.d/*.list; do
+    [ -f "$_src" ] || continue
+    sed -i -E 's|^([[:space:]]*deb(-src)?[[:space:]].*bullseye-backports)|# \1|' "$_src"
+done
+
 apt-get update --allow-releaseinfo-change
 dpkg --configure -a --force-confnew
