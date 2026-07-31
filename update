@@ -5,17 +5,17 @@
 # forever. Non-interactive mode auto-answers with defaults so the update can never hang.
 export DEBIAN_FRONTEND=noninteractive
 
-# --- Kernel/BSP freeze (BLEEDING channel only, for now) ----------------------------------------
+# --- Kernel/BSP freeze (ALL channels) ----------------------------------------------------------
 # A blanket `apt-get upgrade` would swap the board's tested kernel for whatever Armbian ships in its
 # rolling "current" branch (e.g. 6.12 -> 6.18), dropping the board device-tree / WiFi / ethernet
 # customisations that only exist on the pinned 6.12/6.13 kernel (the M4 Berry lost WiFi + gigabit
 # exactly this way). Freeze the kernel + board-support packages so an upgrade can never move them.
-# Gated to the BLEEDING channel until validated in the field, so stable/edge boxes are unaffected.
-if grep -qE '(^| )bleeding( |$)' /etc/apt/sources.list.d/hoobs.list 2>/dev/null; then
-    for pkg in $(dpkg-query -W -f='${Package}\n' 2>/dev/null | grep -E '^(linux-image|linux-dtb|linux-headers|linux-u-boot|armbian-bsp)'); do
-        apt-mark hold "$pkg" >/dev/null 2>&1 || true
-    done
-fi
+# Applies to EVERY channel: the fielded fleet runs stable/edge, and repairing apt (below) un-blocks
+# the kernel drag on exactly those boxes, so the hold is essential on stable — not just bleeding.
+# Fully reversible with `apt-mark unhold` when a tested kernel is shipped deliberately.
+for pkg in $(dpkg-query -W -f='${Package}\n' 2>/dev/null | grep -E '^(linux-image|linux-dtb|linux-headers|linux-u-boot|armbian-bsp)'); do
+    apt-mark hold "$pkg" >/dev/null 2>&1 || true
+done
 
 function ensure_if_exists {
 filename="$1"
@@ -65,17 +65,11 @@ dpkg-reconfigure -f noninteractive debconf > /dev/null 2>&1 || true
 
 
 if [ -f /etc/apt/sources.list.d/nodesource.list ]; then
-    if grep -qE '(^| )bleeding( |$)' /etc/apt/sources.list.d/hoobs.list 2>/dev/null; then
-        # Bleeding needs node 22. NodeSource now serves EVERY distro from the single
-        # 'nodistro' suite — the old per-Debian-codename repos (e.g. bullseye) were
-        # retired and now 404, so we write the correct line deterministically.
-        echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main' > /etc/apt/sources.list.d/nodesource.list
-    else
-        # All other channels: floor at node 20. NodeSource retired the per-Debian-codename suites
-        # (bullseye AND bookworm now 404), so write the unified 'nodistro' suite deterministically
-        # instead of sed-preserving the now-dead codename.
-        echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main' > /etc/apt/sources.list.d/nodesource.list
-    fi
+    # Node 22 on ALL channels. NodeSource retired the per-Debian-codename suites (bullseye AND
+    # bookworm now 404) and serves every distro from the unified 'nodistro' suite, so write the
+    # line deterministically. Node 22 is the current LTS and is published for BOTH arm64 and armhf
+    # on nodistro (armhf is the ceiling — Node 24 has no 32-bit ARM build); Node 20 is EOL.
+    echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main' > /etc/apt/sources.list.d/nodesource.list
 fi
 
 # Disable the retired bullseye-backports suite. Debian removed bullseye-backports; its Release file
