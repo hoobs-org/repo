@@ -12,7 +12,8 @@ export DEBIAN_FRONTEND=noninteractive
 # exactly this way). Freeze the kernel + board-support packages so an upgrade can never move them.
 # Applies to EVERY channel: the fielded fleet runs stable/edge, and repairing apt (below) un-blocks
 # the kernel drag on exactly those boxes, so the hold is essential on stable — not just bleeding.
-# Fully reversible with `apt-mark unhold` when a tested kernel is shipped deliberately.
+# Independent of node/hoobsd/helm (holds only OS/board packages). Reversible with `apt-mark unhold`
+# when a tested kernel is shipped deliberately.
 for pkg in $(dpkg-query -W -f='${Package}\n' 2>/dev/null | grep -E '^(linux-image|linux-dtb|linux-headers|linux-u-boot|armbian-bsp)'); do
     apt-mark hold "$pkg" >/dev/null 2>&1 || true
 done
@@ -65,11 +66,19 @@ dpkg-reconfigure -f noninteractive debconf > /dev/null 2>&1 || true
 
 
 if [ -f /etc/apt/sources.list.d/nodesource.list ]; then
-    # Node 22 on ALL channels. NodeSource retired the per-Debian-codename suites (bullseye AND
-    # bookworm now 404) and serves every distro from the unified 'nodistro' suite, so write the
-    # line deterministically. Node 22 is the current LTS and is published for BOTH arm64 and armhf
-    # on nodistro (armhf is the ceiling — Node 24 has no 32-bit ARM build); Node 20 is EOL.
-    echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main' > /etc/apt/sources.list.d/nodesource.list
+    if grep -qE '(^| )bleeding( |$)' /etc/apt/sources.list.d/hoobs.list 2>/dev/null; then
+        # Bleeding runs the node-22-built hoobsd/helm, so it needs node 22. NodeSource now serves
+        # EVERY distro from the single 'nodistro' suite — the old per-Debian-codename repos (e.g.
+        # bullseye) were retired and now 404 — so we write the correct line deterministically.
+        echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main' > /etc/apt/sources.list.d/nodesource.list
+    else
+        # Stable/edge run the node-20-built hoobsd/helm, so they must STAY on node 20 — node can only
+        # move together with the packages compiled against it, or their native modules break with a
+        # NODE_MODULE_VERSION mismatch. Node 22 comes to stable only as a coordinated release (node-22
+        # hoobsd+helm published to stable + this line flipped to node_22.x, in the same release).
+        # We still rewrite to the unified 'nodistro' suite because the old per-codename repo 404s.
+        echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main' > /etc/apt/sources.list.d/nodesource.list
+    fi
 fi
 
 # Disable the retired bullseye-backports suite. Debian removed bullseye-backports; its Release file
