@@ -6,15 +6,20 @@
 export DEBIAN_FRONTEND=noninteractive
 
 # --- Kernel/BSP freeze (ALL channels) ----------------------------------------------------------
-# A blanket `apt-get upgrade` would swap the board's tested kernel for whatever Armbian ships in its
-# rolling "current" branch (e.g. 6.12 -> 6.18), dropping the board device-tree / WiFi / ethernet
-# customisations that only exist on the pinned 6.12/6.13 kernel (the M4 Berry lost WiFi + gigabit
-# exactly this way). Freeze the kernel + board-support packages so an upgrade can never move them.
+# A blanket `apt-get upgrade` would swap the board's tested kernel for whatever the OS vendor ships
+# in its rolling branch (Armbian "current": e.g. 6.12 -> 6.18), dropping the board device-tree /
+# WiFi / ethernet customisations that only exist on the pinned kernel (the M4 Berry lost WiFi +
+# gigabit exactly this way). Freeze the kernel + bootloader/board-support packages so an upgrade can
+# never move them. Board-aware: Armbian names the kernel linux-image*/linux-dtb*/armbian-bsp*, while
+# Raspberry Pi OS (HSLF-1 Pi 3B / raspbian) names it raspberrypi-kernel + raspberrypi-bootloader —
+# match BOTH so every model is actually held (the Armbian-only pattern held nothing on the Pi).
+# NOTE we deliberately do NOT freeze firmware-* (the Pi's WiFi firmware, firmware-brcm80211, lives in
+# the RPi archive and must stay upgradable) nor the libraspberrypi*/sys-mods userland/config packages.
 # Applies to EVERY channel: the fielded fleet runs stable/edge, and repairing apt (below) un-blocks
 # the kernel drag on exactly those boxes, so the hold is essential on stable — not just bleeding.
 # Independent of node/hoobsd/helm (holds only OS/board packages). Reversible with `apt-mark unhold`
 # when a tested kernel is shipped deliberately.
-for pkg in $(dpkg-query -W -f='${Package}\n' 2>/dev/null | grep -E '^(linux-image|linux-dtb|linux-headers|linux-u-boot|armbian-bsp)'); do
+for pkg in $(dpkg-query -W -f='${Package}\n' 2>/dev/null | grep -E '^(linux-image|linux-dtb|linux-headers|linux-u-boot|armbian-bsp|raspberrypi-kernel|raspberrypi-bootloader)'); do
     apt-mark hold "$pkg" >/dev/null 2>&1 || true
 done
 
